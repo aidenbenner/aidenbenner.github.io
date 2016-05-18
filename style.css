@@ -1,34 +1,10 @@
 :root {
---color-primary-0 : #A7FFCA ; /* Main Primary color */
---color-primary-1 : #FFFFFF ;
---color-primary-2 : #E4FFEF ;
---color-primary-3 : #77FFAE ;
---color-primary-4 : #4AFD92 ;
 
---color-secondary-1-0 : #ABE6FF ;
---color-secondary-1-1 : #FFFFFF ;
---color-secondary-1-2 : #E6F7FF ;
---color-secondary-1-3 : #7DD8FF ;
---color-secondary-1-4 : #52C9FD ;
-
---color-secondary-2-0 : #D7FFA7 ;
---color-secondary-2-1 : #FFFFFF ;
---color-secondary-2-2 : #F3FFE4 ;
---color-secondary-2-3 : #C2FF77 ;
---color-secondary-2-4 : #ADFE4A ;
- 
---color-maintext : #FFFFFF ;
 }   
 
 body { 
 
 }    
-
-@keyframes test{
-
-	from { background-color: white;}
-	to{ background-color: black;}
-}
 
 .about { 
   text-align:center;
