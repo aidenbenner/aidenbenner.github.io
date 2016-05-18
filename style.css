@@ -17,7 +17,7 @@
 --color-secondary-2-3 : #C2FF77 ;
 --color-secondary-2-4 : #ADFE4A ;
  
-
+--color-maintext : #FFFFFF ;
 }   
 
 body { 
@@ -34,10 +34,19 @@ body {
   text-align:center;
 }
 
-.navbar.navbar-brand a{
-    font-size:6em;
+.cust-nav{
+  margin-top:1em;
+    color:#666666;
 }
 
+.cust-nav-link a{ 
+    font-size: 2em;
+    color:#666666;
+}
+
+.cust-nav-link a:hover{
+    color:#999999;
+}
 
 .primary-bar { 
    position:relative; 
@@ -66,5 +75,28 @@ body {
    position:relative; 
    animation-name:flyright;
    animation-duration:2s; }
+
+.cust-foot{
+   height:10em;
+   background-color:#222222;
+   color:#DDDDDD;
+}
+
+.cust-foot-cont{
+    margin-top:4em;
+}
+.cust-foot-link {
+  text-align:center;
+    
+}
+.cust-foot-link a {
+   color:#DDDDDD;
+}
+
+.cust-foot-link a:hover{
+   background-color:#222222;
+   color:#FFFFFF; 
+}
+
 
 
