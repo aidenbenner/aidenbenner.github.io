@@ -2,17 +2,53 @@
 
 }   
 
+
 body { 
 
 }    
 
+
+.namecard h1 {
+    color:#222222;
+    text-align:left;
+    line-height:0.7em;
+}
+
+.maincontent {
+    background-color:#DDDDDD;
+}
+
+.namecard h2 {
+    color:#999999;
+    text-align:left;
+    line-height:0em;
+    font-size:1.6em;
+    margin-bottom:1.1em;
+}
+
+.namecard h3 a{
+    font-size:0.3em;
+    color:#999999;
+    text-align:left;
+}
+
+.namecard h3 {
+    text-align:left;
+    line-height:0;
+}
+
 .about { 
+  font-size:1.5em;
   text-align:center;
 }
 
 .cust-nav{
-  margin-top:1em;
+    margin-top:1em;
     color:#666666;
+}
+
+.cust-nav-link {
+    margin-top:1.5em;
 }
 
 .cust-nav-link a{ 
@@ -21,16 +57,23 @@ body {
 }
 
 .cust-nav-link a:hover{
+    text-decoration:none;
     color:#999999;
+    
+}
+
+.bgholder {
+    background-image:url("img/testbackground.jpg");
 }
 
 .primary-bar { 
-   position:relative; 
+    margin-top:200px;
+   position:no-repeat; 
    height:3.5em;
    line-height:3.5em;
    text-align:center;
    font-size:6em;
-   color:var(--color-secondary-2);
+   color:#FFFFFF;
 }
 
 @keyframes flyleft {
@@ -43,14 +86,19 @@ body {
    to{left:0px}
 }
 .about {
+    color:#FFFFFF;
    position:relative; 
    animation-name:flyleft;
    animation-duration:2s; 
+   margin-bottom:200px;
 }
 .projects{ 
    position:relative; 
    animation-name:flyright;
-   animation-duration:2s; }
+   animation-duration:3s;
+   margin-bottom:5em; 
+   
+   }
 
 .cust-foot{
    height:10em;
