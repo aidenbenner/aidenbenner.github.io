@@ -7,6 +7,13 @@ body {
 
 }    
 
+#headercanvas {
+    position:absolute;
+    width:100%;
+    height:800px;
+}
+
+
 
 .namecard h1 {
     color:#222222;
