@@ -14,8 +14,6 @@ function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
-
-
 var startColor = "#AAAAFF";
 var norm = 80;
 var r = 0;
@@ -30,8 +28,6 @@ function nextColor(){
     g += mult * (Math.random() - 1) ;
     b += mult * (Math.random() - 1) ;
 
-
-    
     if(Math.abs(r ) > max){
         r = (max) * r / Math.abs(r);
     }
