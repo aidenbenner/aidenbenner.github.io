@@ -42,8 +42,6 @@ function hexToRgb(hex) {
 }
 
 
-
-
 function getDistance(colA, colB){
 
 }
@@ -67,9 +65,9 @@ function increment(colA, colB){
     return rgbToHex(colOut);
 }
 
-var startColor = "#00FF00";
+var startColor = rgbToHex(generateRandomRGB(100, 255));
 var endColor = "#EEEEEE";
-var colorSet = "#0000FF";
+var colorSet = rgbToHex(generateRandomRGB(100, 255));
 
 var initTime = 0; 
 function nextColor(){
@@ -81,9 +79,9 @@ function changeSetpoint(){
     colorSet  = rgbToHex(generateRandomRGB(100, 255));
 }
 setInterval(nextColor, 100);
-setInterval(changeSetpoint,2000);
+setInterval(changeSetpoint,1000);
 function updateBackground(){
-    var grd=ctx.createLinearGradient(0,-1,0,canvas.height * 3/4);
+    var grd=ctx.createLinearGradient(0,0,50,canvas.height * 4/4);
     grd.addColorStop(0,startColor);
     grd.addColorStop(1,endColor);
 

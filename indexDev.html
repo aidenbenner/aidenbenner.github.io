@@ -1,86 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+---
+layout: main 
+---
 
-        <title>Aiden Benner - Software Engineering Student, University of Waterloo </title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="style.css" type="text/css" rel="stylesheet">
-    </head>
-    <body>
-        <!-- start nav bar -->     
-        <div class="container cust-nav navbar-fixed-top">
-            <div class="row text-center">
-                <div class="col-md-3 namecard">
-                    <h1> Aiden Benner </h1>
-                </div>
-                <div class="cust-nav-link col-md-2"> 
-                    <a href="#"> Home </a>
-                </div>
-                <div class="cust-nav-link col-md-2"> 
-                    <a href="#"> About </a>
-                </div>
-                <div class="cust-nav-link col-md-2"> 
-                    <a href="#"> Projects </a>
-                </div>
-                <div class="cust-nav-link col-md-2"> 
-                    <a href="#"> Resume </a>
-                </div>
-            </div>
-        </div> 
+<div class="home">
 
-        <div class="bgholder  container-fluid ">
-            <canvas id="headercanvas"> </canvas>
-            <script src="js/HideNav.js" > </script>
-            <script src="js/headeranimation2.js" > </script>
-            <div class="container about ">
-                <div class="primary-bar">
-                    <p>Hello.</p>
-                </div>
-            
-                <p> Hi, my name is Aiden! </p><br>
-                <p> I am a first year Software Engineering student at the University of Waterloo.  
-                </p> 
-                <p>You can contact me at <a href="aiden.benner@uwaterloo.ca">aiden.benner@gmail.com</a> and can find me at <a href="https://github.com/aidenbenner"> github.com/aidenbenner </a> 
-                </p> 
-            </div>
-        </div>
-        </div>
-        <div class="container-fluid maincontent">
-            <div class="container projects">
-                <div class="row">
-                    <div class="col-md-8"> 
-                        <h1> Projects : </h1>
-                        <p> Coming soon...
-                        </p> 
-                    </div> 
-                    <div class="col-md-4">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid cust-foot">
-            <div class="row cust-foot-cont"> 
-                <div class="cust-foot-link col-md-4">
-                </div>
-                <div class="cust-foot-link col-md-4">
-                    <a href="https://github.com/aidenbenner"> Github | </a>
-                    <a href="aiden.benner@uwaterloo.ca"> Email |  </a>
-                    <a href="aiden.benner@uwaterloo.ca"> Linkedn </a>
-                    <br><p> Aiden Benner 2016</p>
-                </div>
-                <div class="cust-foot-link col-md-4">
-                </div>
-            </div>
-        </div>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-    </body>
-</html>
+  <h1>Posts</h1>
+
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

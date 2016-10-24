@@ -1,12 +1,12 @@
 (function ($) {
   $(document).ready(function(){
-	$(".cust-nav").hide();
+	$(".cust-nav-stick").hide();
 	$(function () {
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > 1001) {
-				$('.cust-nav').fadeIn();
+				$('.cust-nav-stick').fadeIn();
 			} else {
-				$('.cust-nav').fadeOut();
+				$('.cust-nav-stick').fadeOut();
 			}
 		});
 	});
