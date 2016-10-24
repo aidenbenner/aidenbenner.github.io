@@ -1,0 +1,11 @@
+# Site settings
+title: Aiden Benner - Waterloo SE 2021 
+email: aiden.benner@uwaterloo.ca 
+description: "My personal blog and portfolio."
+baseurl: ""
+url: "http://aidenbenner.github.io"
+github_username:  aidenbenner 
+
+# Build settings
+markdown: kramdown
+permalink: pretty
