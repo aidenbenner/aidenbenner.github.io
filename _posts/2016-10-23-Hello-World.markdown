@@ -1,15 +1,16 @@
 ---
-layout: post
-title:  "Welcome to Jekyll!"
-date:   2016-10-23 23:17:01
+layout: main 
+title:  "Hello World"
+date:   2016-10-20 23:17:01
 categories: jekyll update
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+To ad new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
 
 Jekyll also offers powerful support for code snippets:
 
+test
 
 {% highlight ruby %}
 def print_hi(name)
