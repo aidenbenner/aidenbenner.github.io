@@ -1,79 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <title>Aiden Benner - Software Engineering Student, University of Waterloo </title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Bootstrap -->
-        <link href="/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/css/style.css" type="text/css" rel="stylesheet">
-    </head>
-    <body>
-        <!-- start nav bar -->     
-                <div class="bgholder container-fluid ">
-            <canvas id="headercanvas"> </canvas>
-         <div class="container cust-nav ">
-            <div class="row text-center">
-                <div class="col-md-3 namecard">
-                    <h1> Aiden Benner </h1>
-                </div>
-                <div class="cust-nav-link col-md-2"> 
-                    <a href="#"> Home </a>
-                </div>
-                <div class="cust-nav-link col-md-2"> 
-                    <a href="#"> About </a>
-                </div>
-                <div class="cust-nav-link col-md-2"> 
-                    <a href="#"> Projects </a>
-                </div>
-                <div class="cust-nav-link col-md-2"> 
-                    <a href="#"> Resume </a>
-                </div>
-            </div>
-        </div> 
+    <!-- FONTS -->
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto|Source+Code+Pro" rel="stylesheet">
 
-   <!--<script src="js/HideNav.js" > </script>-->
-            <script src="/js/headeranimation2.js" > </script>
-            <div class="container about ">
-                <div class="primary-bar">
-                    <p>Hello</p>
-                </div>
-                <p> Hi, my name is Aiden! </p><br>
-                <p> I am a first year Software Engineering student at the University of Waterloo.  
-                </p> 
-                <p>You can contact me at <a href="aiden.benner@uwaterloo.ca">aiden.benner@gmail.com</a> and can find me at <a href="https://github.com/aidenbenner"> github.com/aidenbenner </a> 
-                </p> 
-            </div>
+    <title>Aiden Benner - Software Engineering Student, University of Waterloo </title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- start nav bar -->     
+    <div class="bgholder container-fluid ">
+      <div class="container cust-nav ">
+        <div class="row text-center">
+          <div class="col-md-3 namecard">
+            <h1> Aiden Benner </h1>
+          </div>
+          <div class="cust-nav-link col-md-2"> 
+            <a href="#"> Home </a>
+          </div>
+          <div class="cust-nav-link col-md-2"> 
+            <a href="#"> Blog </a>
+          </div>
+          <div class="cust-nav-link col-md-2"> 
+            <a href="#"> Projects </a>
+          </div>
+          <div class="cust-nav-link col-md-2"> 
+            <a href="#"> Resume </a>
+          </div>
         </div>
+      </div> 
+
+      <!--<script src="js/HideNav.js" > </script>-->
+      <div class="container about ">
+        <div class="primary-bar">
+          <span class="typed">
+          </span>
         </div>
-        <div class="container-fluid maincontent">
-            <div class="container projects">
-                <div class="row">
-                    {{ content }} 
-                </div>
-            </div>
+        <p> I am a first year Software Engineering student at the University of Waterloo.  
+        </p> 
+        <p><a href="aiden.benner@uwaterloo.ca">email </a> | <a href="https://github.com/aidenbenner"> github </a> 
+        </p> 
+      </div>
+    </div>
+    </div>
+    <div class="container-fluid maincontent">
+      <div class="container projects">
+        <div class="row">
+          {{ content }} 
         </div>
-        <div class="container-fluid cust-foot">
-            <div class="row cust-foot-cont"> 
-                <div class="cust-foot-link col-md-4">
-                </div>
-                <div class="cust-foot-link col-md-4">
-                    <a href="https://github.com/aidenbenner"> Github | </a>
-                    <a href="aiden.benner@uwaterloo.ca"> Email |  </a>
-                    <a href="aiden.benner@uwaterloo.ca"> Linkedn </a>
-                    <br><p> Aiden Benner 2016</p>
-                </div>
-                <div class="cust-foot-link col-md-4">
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="container-fluid cust-foot">
+      <div class="row cust-foot-cont"> 
+        <div class="cust-foot-link col-md-4">
         </div>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="/js/bootstrap.min.js"></script>
-    </body>
+        <div class="cust-foot-link col-md-4">
+          <a href="https://github.com/aidenbenner"> Github | </a>
+          <a href="aiden.benner@uwaterloo.ca"> Email |  </a>
+          <a href="aiden.benner@uwaterloo.ca"> Linkedn </a>
+          <br><p> Aiden Benner 2016</p>
+        </div>
+        <div class="cust-foot-link col-md-4">
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+ <script src="https://cdn.jsdelivr.net/jquery.typeit/4.2.3/typeit.min.js"></script>   
+ <script src="/js/typed.js"></script>
+ <script src="/js/index_typer.js"></script>
+
+  </body>
 </html>

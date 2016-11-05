@@ -1,13 +1,44 @@
+---
+# front matters jekyll needs to read properly
+---
+$primary-background:#464E54;
+$header-text-col:#EAEAEA;
+$header-secondary-col:#EAEAEA;
+$primary-text-col:#EAEAEA;
+$nav-primary-text:#EAEAEA;
+$nav-secondary-text:#FBFBFB;
+$nav-link-col:#FBFBFB;
+$nav-hover-col:#FBFBFB;
+$link-col:#FBFBFB;
+$link-hover-col:#FBFBFB;
+
+$code-font: 'Source Code Pro', monospace;
+$main-font: 'Roboto', sans-serif;
+$type-font:$code-font;
+
 :root {
 
 }   
 
-
 body { 
-
+    font-family:$main-font;
+    background-color:$primary-background;
+    a {
+      color:$link-col; 
+    }
+    a:hover {
+      color:$link-hover-col; 
+    }
 }    
 
+
+
+.container-fluid{
+    background-color:$primary-background;
+}
+
 #headercanvas {
+    background-color:$primary-background;
     position:absolute;
     width:100%;
     height:1000px;
@@ -18,17 +49,16 @@ body {
 }
 
 .namecard h1 {
-    color:#000000;
+    color:$header-text-col;
     text-align:left;
     line-height:0.7em;
 }
 
 .maincontent {
-    background-color:#DDDDDD;
+    background-color:$header-text-col;
 }
 
 .namecard h2 {
-    color:#000000;
     text-align:left;
     line-height:0em;
     font-size:1.6em;
@@ -37,7 +67,6 @@ body {
 
 .namecard h3 a{
     font-size:0.3em;
-    color:#000000;
     text-align:left;
 }
 
@@ -56,8 +85,6 @@ body {
     margin-left:auto;
     margin-right:auto;
     margin-top:1em;
-    color:#666666;
-    
     top:0px;
 }
 
@@ -67,27 +94,26 @@ body {
 
 .cust-nav-link a{ 
     font-size: 2em;
-    color:#666666;
+    color:$nav-link-col;
 }
 
 .cust-nav-link a:hover{
     text-decoration:none;
-    color:#000000;
+    color:$nav-hover-col;
 }
 
 .bgholder {
     margin:0;
     padding:0;
     width:100%;
-    height:707000;
 }
 
 .primary-bar { 
     height:3.5em;
     line-height:3.5em;
     text-align:center;
-    font-size:6em;
-    color:#000000;
+    font-size:3.5em;
+    color:$header-text-col;
 }
 
 @keyframes flyleft {
@@ -99,16 +125,16 @@ body {
     from{left:-1200px}
     to{left:0px}
 }
+
+
 .about {
-    color:#000000;
+    color:$header-secondary-col;;
     position:relative; 
-    animation-name:flyleft;
     animation-duration:2s; 
     margin-bottom:200px;
 }
 .projects{ 
     position:relative; 
-    animation-name:flyright;
     animation-duration:3s;
     margin-bottom:5em; 
 
@@ -136,3 +162,24 @@ body {
     color:#FFFFFF; 
 }
 
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
