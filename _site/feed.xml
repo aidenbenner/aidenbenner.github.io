@@ -5,9 +5,20 @@
     <description>My personal blog and portfolio.</description>
     <link>http://aidenbenner.github.io/</link>
     <atom:link href="http://aidenbenner.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 04 Nov 2016 23:29:56 -0400</pubDate>
-    <lastBuildDate>Fri, 04 Nov 2016 23:29:56 -0400</lastBuildDate>
+    <pubDate>Fri, 04 Nov 2016 23:37:58 -0400</pubDate>
+    <lastBuildDate>Fri, 04 Nov 2016 23:37:58 -0400</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title></title>
+        <description>&lt;p&gt;TEST PROJECT&lt;/p&gt;
+</description>
+        <pubDate>Fri, 04 Nov 2016 23:37:58 -0400</pubDate>
+        <link>http://aidenbenner.github.io/2016/11/04/2016-10-25-Test-Project/</link>
+        <guid isPermaLink="true">http://aidenbenner.github.io/2016/11/04/2016-10-25-Test-Project/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Welcome to Jekyll!</title>
