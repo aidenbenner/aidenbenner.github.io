@@ -32,6 +32,12 @@ function date_diff_str(a,b)
   minutes = Math.floor(minutes);
   hours = Math.floor(hours);
   days = Math.floor(days);
+
+  seconds = Math.abs(seconds);
+  minutes = Math.abs(minutes);
+  hours  = Math.abs(hours );
+  days = Math.abs(days); 
+
   return days + ":" + pad_2_dig(hours) + ":" + pad_2_dig(minutes) + ":" + pad_2_dig(seconds); 
 }
 
