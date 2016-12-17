@@ -1,8 +1,8 @@
-body { font-family: "Roboto", sans-serif; background-color: #EAEAEA; }
+body { font-family: "Roboto", sans-serif; background-color: #EAEAEA; overflow-x: hidden; margin: 0px; padding: 0px; }
 body a { color: #FBFBFB; }
 body a:hover { color: #FBFBFB; }
 
-.container-fluid { margin: 0; padding: 0; width: 100%; background-color: #EAEAEA; }
+.container-fluid { margin: 0; padding: 0; border: 0; width: 100%; background-color: #EAEAEA; }
 
 .cust-nav { display: block; margin-left: auto; margin-right: auto; margin-top: 1em; top: 0px; color: black; }
 
@@ -23,6 +23,8 @@ body a:hover { color: #FBFBFB; }
 #name-top p { font-size: 3.5em; line-height: 1em; margin-bottom: 0px; }
 
 span.avoidwrap { display: inline-block; }
+
+.about-bar { margin: 0px; padding: 0px; }
 
 /* small-large devices (tablets, 768px and up) */
 @media (min-width: 750px) { .about-bar { font-size: 1em; background-color: #0D8FFF; overflow: auto; padding-bottom: 1em; }

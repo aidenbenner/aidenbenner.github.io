@@ -21,17 +21,21 @@ $type-font:$code-font;
 body { 
   font-family:$main-font;
   background-color:$primary-background;
+  overflow-x: hidden;
   a {
     color:$link-col; 
   }
   a:hover {
     color:$link-hover-col; 
   }
+  margin:0px;
+  padding:0px; 
 }    
 
 .container-fluid{
   margin:0;
   padding:0;
+  border:0;
   width:100%;
   background-color:$primary-background;
 }
@@ -92,6 +96,10 @@ body {
 
 span.avoidwrap { display:inline-block; }
 
+.about-bar {
+  margin:0px;
+  padding:0px;
+}
 
 /* small-large devices (tablets, 768px and up) */
 @media (min-width:750px){
