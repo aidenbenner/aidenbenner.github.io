@@ -20,10 +20,18 @@ body a:hover { color: #FBFBFB; }
 
 .namecard h3 { text-align: left; line-height: 0; }
 
-.about-bar { height: 30em; background-color: #0D8FFF; margin-bottom: 5em; }
-
 #name-top p { font-size: 3.5em; line-height: 1em; margin-bottom: 0px; }
 
+span.avoidwrap { display: inline-block; }
+
+/* small-large devices (tablets, 768px and up) */
+@media (min-width: 750px) { .about-bar { font-size: 1em; background-color: #0D8FFF; overflow: auto; padding-bottom: 1em; }
+  .new-nav { margin-top: 6em; } }
+/* extra small < 768px  */
+@media (max-width: 750px) { #name-top p { font-size: 2.4em; }
+  .about-top { font-align: left; margin-top: 1em; }
+  .about-bar { font-size: 1em; background-color: #0D8FFF; overflow: auto; padding-bottom: 1em; }
+  .new-nav { margin-top: 1em; } }
 .about { margin-top: 10em; text-align: left; font-size: 1.5em; color: #EAEAEA; }
 
 .about p { margin: 0px; }

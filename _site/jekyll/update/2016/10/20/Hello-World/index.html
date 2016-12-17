@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1; minimum-scale=1;">
+
+
+
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- FONTS -->
@@ -44,22 +47,23 @@
       <div class="container-fluid about-bar">
         <div class="container about"> 
           <span id="name-top"> <p> aiden benner </p></span>
-          <p>1B Software Engineering | University of Waterloo</p>
-          <p>
+          <div class="about-top"> 
+            <p>1B Software Engineering | 
+            <span class="avoidwrap">University of Waterloo </span> </p> 
+          </div>
 
-          <br><br>
           <div class="new-nav">  
-            <div class="col-md-3"> 
-              <p> Projects </p> 
+            <div class="col-sm-3"> 
+              <a> <p> Projects </p> </a> 
             </div>
-            <div class="col-md-3">
-              <p> Resume </p>
+            <div class="col-sm-3">
+              <a> <p> Resume </p> </a>
             </div>
-            <div class="col-md-3"> 
+            <div class="col-sm-3"> 
               <a href="mailto:abenner@uwaterloo.ca" title="abenner@uwaterloo.ca"> Contact </a>
             </div>
-            <div class="col-md-3"> 
-              <p> Blog </p> 
+            <div class="col-sm-3"> 
+              <a> <p> Blog </p>  </a> 
             </div>
           </div> 
           <!--<a href="https://github.com/aidenbenner"> <img src="/img/github.png"></a> -->
@@ -72,12 +76,16 @@
             <!-- <span class="typed"> </span> --> 
             <!-- <p><a href="aiden.benner@uwaterloo.ca">email</a> | <a href="github.com/aidenbenner"> github </a>  | resume </a> </p> --> 
             <!--<a href="https://github.com/aidenbenner"> <img src="/img/github.png"></a> -->
-          </p> 
         </div>
       </div>
 
       <div class="container content">
-        <div class = "col-md-8">
+        <div class = "col-md-4 col-md-push-8"> 
+          <h1> About </h1>
+          <p> My name is Aiden and I study Software Engineering at the University of Waterloo. I love programming, learning and games. </p>
+          <p> You can contact me through my <a href="mailto:abenner@uwaterloo.ca" title="abenner@uwaterloo.ca">email</a>, and can find me on <a href="https://github.com/aidenbenner"> github. </a></p>
+        </div>
+        <div class = "col-md-8 col-md-pull-4">
           <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory - edit this post and re-build (or run with the <code class="highlighter-rouge">-w</code> switch) to see your changes!
 To ad new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention: YYYY-MM-DD-name-of-post.ext.</p>
 
@@ -94,11 +102,6 @@ To ad new posts, simply add a file in the <code class="highlighter-rouge">_posts
 <p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>.</p>
 
  
-        </div>
-        <div class = "col-md-4"> 
-          <h1> About </h1>
-          <p> My name is Aiden and I study Software Engineering at the University of Waterloo. I love programming, learning and games. </p>
-          <p> You can contact me through my <a href="mailto:abenner@uwaterloo.ca" title="abenner@uwaterloo.ca">email</a>, and can find me on <a href="https://github.com/aidenbenner"> github. </a></p>
         </div>
         <!-- <p><a href="aiden.benner@uwaterloo.ca">email</a> | <a href="github.com/aidenbenner"> github </a>  | resume </a> </p> --> 
       </div>
