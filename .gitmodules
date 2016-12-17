@@ -1,0 +1,3 @@
+[submodule "matrix-utils"]
+	path = projects/matrix-utils/
+	url = https://github.com/aidenbenner/matrix-utils.git
