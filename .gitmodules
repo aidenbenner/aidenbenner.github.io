@@ -1,3 +1,6 @@
 [submodule "projects/matrix-utils"]
 	path = projects/matrix-utils
 	url = https://github.com/aidenbenner/matrix-utils.git
+[submodule "projects/doodles"]
+	path = projects/doodles
+	url = https://github.com/aidenbenner/doodles.git
