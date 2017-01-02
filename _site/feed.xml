@@ -5,18 +5,40 @@
     <description>My personal blog and portfolio.</description>
     <link>http://aidenbenner.github.io/</link>
     <atom:link href="http://aidenbenner.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 17 Dec 2016 20:47:30 -0500</pubDate>
-    <lastBuildDate>Sat, 17 Dec 2016 20:47:30 -0500</lastBuildDate>
-    <generator>Jekyll v3.2.1</generator>
+    <pubDate>Sun, 18 Dec 2016 18:20:59 -0500</pubDate>
+    <lastBuildDate>Sun, 18 Dec 2016 18:20:59 -0500</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
     
       <item>
-        <title></title>
-        <description>&lt;p&gt;TEST PROJECT&lt;/p&gt;
+        <title>1A Retrospective</title>
+        <description>&lt;p&gt;Yesterday I finished the last exam of my 1A term. It’s hard to believe that it’s already been four months. Our last exam crushed a lot of people so the atmosphere was after the exam was mixed. All of 1A software takes the same courses, meaning you get to see your classmates a ton. The cohort system is fantastic and is in my opinion the main advantage of Software over CS. I thought I’d a brief overview of each course I took this semester while they’re still fresh in my head.&lt;/p&gt;
+
+&lt;h2 id=&quot;math-117---calculus-for-engineers&quot;&gt;Math 117 - Calculus for Engineers&lt;/h2&gt;
+&lt;p&gt;This is a pretty standard calculus course with lots of review depending on your high school calculus curriculum. I know Ontario students don’t see integrals in high school, which would make this course much harder. The course goes fast since engineering squeezes three courses of calc content into two. There are two weekly assignments, one online and one written that were never too difficult. Our class midterm average was extremely high which resulted in a harder final than most expected. Anyways I enjoyed this course.&lt;/p&gt;
+
+&lt;h2 id=&quot;math-115---linear-algebra&quot;&gt;Math 115 - Linear Algebra&lt;/h2&gt;
+&lt;p&gt;This was probably my favourite course I took this term. This was the only course where everything I learned was entirely new, and the content is super useful.&lt;/p&gt;
+
+&lt;h2 id=&quot;ece-140---linear-circuits&quot;&gt;ECE 140 - Linear Circuits&lt;/h2&gt;
+&lt;p&gt;A really cool course covering the basics of circuit analysis. Circuit analysis is pretty interesting. There are really only three fundamental laws and everything is based off of that. This was the only course without mandatory weekly assignments or quizzes, so it was pretty easy to fall behind.&lt;/p&gt;
+
+&lt;h2 id=&quot;ece-105---physics-for-electrical-engineers&quot;&gt;ECE 105 - Physics for Electrical Engineers&lt;/h2&gt;
+&lt;p&gt;This was a tough course for a lot of people including myself. It’s basically high school mechanics but harder. The final exam was hard.&lt;/p&gt;
+
+&lt;h2 id=&quot;se-101---introduction-to-software-engineering&quot;&gt;SE 101 - Introduction to Software Engineering&lt;/h2&gt;
+&lt;p&gt;This is one of the more relaxed courses we took. There is no final exam. And the final project is worth 50% of your mark.&lt;/p&gt;
+
+&lt;h2 id=&quot;cs-137---programming-fundamentals&quot;&gt;CS 137 - Programming Fundamentals&lt;/h2&gt;
+
+&lt;p&gt;Considering that ⅚ of my courses were partially review, I’m expecting a sharp difficulty jump next term when the content is both more challenging and foreign to me. Coop also begins next term so that’ll be a time drain. But I’m excited to start.&lt;/p&gt;
+
 </description>
-        <pubDate>Sat, 17 Dec 2016 20:47:30 -0500</pubDate>
-        <link>http://aidenbenner.github.io/2016/12/17/2016-10-25-Test-Project/</link>
-        <guid isPermaLink="true">http://aidenbenner.github.io/2016/12/17/2016-10-25-Test-Project/</guid>
+        <pubDate>Sun, 18 Dec 2016 15:00:00 -0500</pubDate>
+        <link>http://aidenbenner.github.io/blog/2016/12/18/1A-Restrospective/</link>
+        <guid isPermaLink="true">http://aidenbenner.github.io/blog/2016/12/18/1A-Restrospective/</guid>
         
+        
+        <category>blog</category>
         
       </item>
     
@@ -30,8 +52,8 @@ To add new posts, simply add a file in the &lt;code class=&quot;highlighter-roug
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
 
@@ -59,8 +81,8 @@ To ad new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
 

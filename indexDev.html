@@ -3,7 +3,6 @@ layout: main
 ---
 
 <div class="home">
-  <h1>Projects</h1>
 
   <!-- 
   <ul class="posts">
@@ -16,7 +15,11 @@ layout: main
     </ul> --> 
 
     {% for post in site.posts %}
-    <h2> {{post.title}} </h2>
+    <h1> 
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> </h1> 
+
+    <p class="meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>  
+
     <p> {{post.content}} </p>
     {% endfor %} 
 

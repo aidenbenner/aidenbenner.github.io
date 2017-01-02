@@ -27,6 +27,7 @@ body {
   }
   a:hover {
     color:$link-hover-col; 
+    text-decoration:none;
   }
   margin:0px;
   padding:0px; 
@@ -182,7 +183,7 @@ span.avoidwrap { display:inline-block; }
 }
 
 .cust-foot-link a:hover{
-  color:#B23C00;
+  color:#E8560C;
 }
 
 .typed-cursor{
