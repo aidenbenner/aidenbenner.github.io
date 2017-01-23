@@ -5,9 +5,35 @@
     <description>My personal blog and portfolio.</description>
     <link>http://aidenbenner.github.io/</link>
     <atom:link href="http://aidenbenner.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 23 Jan 2017 00:09:10 -0500</pubDate>
-    <lastBuildDate>Mon, 23 Jan 2017 00:09:10 -0500</lastBuildDate>
+    <pubDate>Mon, 23 Jan 2017 00:58:14 -0500</pubDate>
+    <lastBuildDate>Mon, 23 Jan 2017 00:58:14 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Matrix Utils</title>
+        <description>
+</description>
+        <pubDate>Thu, 20 Oct 2016 16:17:01 -0400</pubDate>
+        <link>http://aidenbenner.github.io/project/2016/10/20/Matrix-Utils/</link>
+        <guid isPermaLink="true">http://aidenbenner.github.io/project/2016/10/20/Matrix-Utils/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>Diamond Square</title>
+        <description>
+</description>
+        <pubDate>Mon, 21 Mar 2016 19:17:01 -0400</pubDate>
+        <link>http://aidenbenner.github.io/project/2016/03/21/Diamond-Square/</link>
+        <guid isPermaLink="true">http://aidenbenner.github.io/project/2016/03/21/Diamond-Square/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
     
       <item>
         <title>Neural Network For Ocr</title>
@@ -85,9 +111,40 @@ constant, and received very positive results (see appendix).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/JXKyPYC.png&quot; alt=&quot;Demo of character segmentation&quot; /&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Thu, 20 Oct 2016 19:17:01 -0400</pubDate>
-        <link>http://aidenbenner.github.io/project/2016/10/20/Neural-Network-for-OCR/</link>
-        <guid isPermaLink="true">http://aidenbenner.github.io/project/2016/10/20/Neural-Network-for-OCR/</guid>
+        <pubDate>Tue, 12 Jan 2016 18:17:01 -0500</pubDate>
+        <link>http://aidenbenner.github.io/project/2016/01/12/Neural-Network-for-OCR/</link>
+        <guid isPermaLink="true">http://aidenbenner.github.io/project/2016/01/12/Neural-Network-for-OCR/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>Gravity Sim</title>
+        <description>&lt;p&gt;A simulation of gravity between stellar bodies. Written in Java for a grade 11 CS project.&lt;/p&gt;
+
+&lt;p&gt;After inputting the initial parameters, a number of small, medium and large masses are added to the simulation. The bodies then interact through simulation of a graviational force using a user defined gravitational constant. The initial velocity and initial mass is randomly generated for each body.&lt;/p&gt;
+
+&lt;p&gt;Bodies with high mass are identified with red, medium with green and low with blue. Within each mass group, relative mass is determined by size (bigger the circle = the greater the mass).&lt;/p&gt;
+
+&lt;p&gt;A fixed central body can also be added. The value of the gravitational constant is requested on start. A constant &amp;lt; 1 is suggested.&lt;/p&gt;
+
+&lt;h1 id=&quot;demo&quot;&gt;Demo&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/z68Dktf.png&quot; alt=&quot;central body with few small&quot; /&gt;
+Above shows a fixed central body with around 20 or so smaller bodies orbiting/drifting.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ETKukZi.png&quot; alt=&quot;screenshot chaotic&quot; /&gt;
+Here is a slightly more hectic scenario with a decent number of red, blue and green masses all drifting freely.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/WMhjmPY.png&quot; alt=&quot;screenshot 100+ bodies&quot; /&gt;
+100+ small bodies, 20+ medium, 20+ large
+This one was a little bit crazy.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 21 Nov 2015 18:17:01 -0500</pubDate>
+        <link>http://aidenbenner.github.io/project/2015/11/21/Gravity-Sim/</link>
+        <guid isPermaLink="true">http://aidenbenner.github.io/project/2015/11/21/Gravity-Sim/</guid>
         
         
         <category>project</category>
@@ -130,9 +187,9 @@ constant, and received very positive results (see appendix).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/Lxi5hZ4.png&quot; alt=&quot;About to lose&quot; /&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Thu, 20 Oct 2016 19:17:01 -0400</pubDate>
-        <link>http://aidenbenner.github.io/project/2016/10/20/Tetris/</link>
-        <guid isPermaLink="true">http://aidenbenner.github.io/project/2016/10/20/Tetris/</guid>
+        <pubDate>Sat, 24 Oct 2015 19:17:01 -0400</pubDate>
+        <link>http://aidenbenner.github.io/project/2015/10/24/Tetris/</link>
+        <guid isPermaLink="true">http://aidenbenner.github.io/project/2015/10/24/Tetris/</guid>
         
         
         <category>project</category>

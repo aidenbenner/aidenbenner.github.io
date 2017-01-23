@@ -74,3 +74,5 @@ span.avoidwrap { display: inline-block; }
 @keyframes flyright { from { left: -1200px; }
   to { left: 0px; } }
 hr { border-color: black; backgound-color: black; color: black; }
+
+.img-responsive { margin: 0 auto; width: 100%; }

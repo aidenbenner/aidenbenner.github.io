@@ -1,7 +1,7 @@
 ---
 layout: main
-tite: "Neural Network for Handwriting Recognition"
-date:   2016-10-20 23:17:01
+tite: Neural Network for Handwriting Recognition
+date:   2016-01-12 23:17:01
 categories: project
 github: https://github.com/aidenbenner/handwriting-ann
 img: http://i.imgur.com/q7RKTTN.png

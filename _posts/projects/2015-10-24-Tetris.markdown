@@ -1,7 +1,7 @@
 ---
 layout: main
-tite: "Neural Network for Handwriting Recognition"
-date:   2016-10-20 23:17:01
+tite: Tetris 
+date:   2015-10-24 23:17:01
 categories: project
 github: https://github.com/aidenbenner/tetris-clone
 img: http://i.imgur.com/epF4KJN.png
