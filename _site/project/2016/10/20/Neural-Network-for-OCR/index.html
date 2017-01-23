@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1; minimum-scale=1;">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto|Source+Code+Pro" rel="stylesheet">
+    <script src="https://use.fontawesome.com/a1281f6236.js"></script>
+
+    <title>Aiden Benner - University of Waterloo </title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container-fluid about-bar">
+      <div class="container about"> 
+        <span id="name-top"> <p> Aiden Benner </p></span>
+        <div class="about-top"> 
+          <p>1B Software Engineering | 
+          <span class="avoidwrap">University of Waterloo </span> </p> 
+        </div>
+
+        <div class="new-nav">  
+          <div class="col-sm-3"> 
+            <a> <p> Projects </p> </a> 
+          </div>
+          <div class="col-sm-3">
+            <a href="/resume.pdf"> <p> Resume </p> </a>
+          </div>
+          <div class="col-sm-3"> 
+            <a href="mailto:abenner@uwaterloo.ca" title="abenner@uwaterloo.ca"> Contact </a>
+          </div>
+          <div class="col-sm-3"> 
+            <a href="/blog/"> <p> Blog </p>  </a> 
+          </div>
+        </div> 
+      </div>
+    </div>
+
+    <div class="container content">
+      <div class = "col-md-4 col-md-push-8"> 
+        <h2> About </h2>
+        <p> My name is Aiden and I study Software Engineering at the University of Waterloo. I'm from Calgary, Alberta and I love programming, learning and games. </p>
+        <p> You can contact me through my <a href="mailto:abenner@uwaterloo.ca" title="abenner@uwaterloo.ca">email</a>, and can find me on <a href="https://github.com/aidenbenner"> github. </a></p>
+
+
+        <hr>
+      
+        <h3>
+          <a class="post-link" href="/project/2016/10/20/Neural-Network-for-OCR/">Neural Network For Ocr</a>&nbsp;&#45;&nbsp;<small><span class="post-meta">Oct 20, 2016</span></small>
+        </h3>
+      
+        <h3>
+          <a class="post-link" href="/project/2016/10/20/Tetris/">Tetris</a>&nbsp;&#45;&nbsp;<small><span class="post-meta">Oct 20, 2016</span></small>
+        </h3>
+      
+
+      </div>
+      <div class = "col-md-8 col-md-pull-4">
+        <h1 id="handwritingann">Handwriting_ANN</h1>
+<p>Convert images of handwriting to digital text using neural networks.
+Created for grade 12 Computer Science IB IA.
+Implemented using Java and Opencv.</p>
+
+<h2 id="program-overview">Program Overview</h2>
+<p><img src="http://i.imgur.com/XI4TMfd.png" alt="High level program flow" /></p>
+
+<p>The general idea behind the ANN is to receive inputs (in this case pixel intensity values that we have parsed from our
+image). Each circle above represents a neuron and each line represents a connection between two neurons. ANN’s are
+composed of three types of layers, the input layer, the hidden layers and the output layer. The fundamental unit of the
+ANN is the Neuron. The Neuron has a set of weights attached to it each corresponding Neuron in the previous layer
+(unless it’s an input layer). Inputs are given to the input layer of the network, the inputs are then feed forward through
+the neurons to reach the output layer. Each neuron uses the same activation function, in this case a sigmoid function</p>
+
+<p><img src="http://i.imgur.com/q7RKTTN.png" alt="Overview of a neural network" /></p>
+
+<p>The general idea of the backpropagation algorithm is to ‘backpropagate’ calculated error in the last layer throughout
+the network adjusting the weights of each individual neurons by comparing their last output and calculated error
+value. Below is the code that changes the weights of each neuron. The new weight is equal to the current error which
+is calculated from the product of the error and weight of the nodes ahead of the current and is multiplied by the
+learning constants h. The h value is a constant that needs to be tuned, if it is too big, the weights will continue to
+overshoot and total error will oscillate around the desired. If the weight is too small it will take too long for the
+network to train, and it may not even train at all. It is also sometimes beneficial to change the learning constant
+overtime, first starting with a high value to speed up initial change where error is very high, and then slowly
+decreasing the learning constant so the network can converge on the ideal weight configuration. After finished the
+backpropagation algorithm I tried training it on a sine function in order to debug and to tune the network and learning
+constant, and received very positive results (see appendix).</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code>	<span class="c1">//BACKPROP</span>
+	<span class="kt">double</span> <span class="n">biasChange</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">adjustWeights</span><span class="o">(</span> <span class="kt">double</span> <span class="n">h</span><span class="o">){</span>
+		<span class="c1">//brings output from forward, delta from last </span>
+		<span class="k">if</span><span class="o">(!</span><span class="n">inputLayer</span><span class="o">){</span>
+			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">weights</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+				<span class="kt">double</span> <span class="n">deltaWeight</span> <span class="o">=</span> <span class="n">currDelta</span> <span class="o">*</span> <span class="n">h</span> <span class="o">*</span> <span class="n">lastInputs</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="n">deltaWeights</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">*</span> <span class="n">momentum</span><span class="o">;</span>
+				<span class="n">weights</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">weights</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="n">deltaWeight</span><span class="o">;</span>
+				<span class="n">deltaWeights</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">deltaWeight</span><span class="o">;</span>
+			<span class="o">}</span>
+			<span class="n">biasChange</span> <span class="o">=</span> <span class="n">currDelta</span> <span class="o">*</span> <span class="n">h</span> <span class="o">+</span> <span class="n">biasChange</span> <span class="o">*</span> <span class="n">momentum</span><span class="o">;</span>
+			<span class="k">this</span><span class="o">.</span><span class="na">bias</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">bias</span> <span class="o">+</span> <span class="n">biasChange</span><span class="o">;</span>
+			<span class="k">this</span><span class="o">.</span><span class="na">bias</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">bias</span> <span class="o">+</span> <span class="n">currDelta</span> <span class="o">*</span> <span class="n">h</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="c1">//System.out.println(delta + " " + weight + " ");</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="kt">double</span> <span class="nf">getDelta</span><span class="o">(</span><span class="kt">double</span><span class="o">[]</span> <span class="n">error</span><span class="o">,</span> <span class="n">Neuron</span><span class="o">[]</span> <span class="n">fwdLayer</span><span class="o">,</span> <span class="kt">int</span> <span class="n">index</span><span class="o">){</span>
+		<span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">error</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+			<span class="n">sum</span> <span class="o">+=</span> <span class="n">fwdLayer</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">currDelta</span> <span class="o">*</span> <span class="n">fwdLayer</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">weights</span><span class="o">[</span><span class="n">index</span><span class="o">];</span>
+		<span class="o">}</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">currDelta</span> <span class="o">=</span> <span class="o">(</span><span class="n">lastOutput</span> <span class="o">*</span> <span class="o">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">lastOutput</span><span class="o">)</span> <span class="o">*</span> <span class="o">(</span><span class="n">sum</span><span class="o">));</span>
+		<span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">currDelta</span><span class="o">;</span>
+	<span class="o">}</span>
+</code></pre>
+</div>
+
+<h2 id="training">Training</h2>
+
+<p>Successful training of a sin function to test network</p>
+
+<p><img src="http://i.imgur.com/WSfWhGs.png" alt="Training on a sin function" /></p>
+
+<p>Successful training using character test panel</p>
+
+<p><img src="http://i.imgur.com/IaHIzbY.png" alt="Successful preliminary recognition of characters" /></p>
+
+<p><img src="http://i.imgur.com/Tmd88ZO.png" alt="Successful preliminary recognition 2" /></p>
+
+<p>Character segmentation demonstration:</p>
+
+<p><img src="http://i.imgur.com/JXKyPYC.png" alt="Demo of character segmentation" /></p>
+
+ 
+      </div>
+      <!-- <p><a href="aiden.benner@uwaterloo.ca">email</a> | <a href="github.com/aidenbenner"> github </a>  | resume </a> </p> --> 
+    </div>
+
+    <div class="container-fluid cust-foot">
+      <div class="row cust-foot-cont"> 
+        <div class="cust-foot-link col-md-4">
+        </div>
+        <div class="cust-foot-link col-md-4">
+          <a href="https://github.com/aidenbenner"> Github | </a>
+          <a href="aiden.benner@uwaterloo.ca"> Email |  </a>
+          <a href="/resume.pdf"> Resume </a>
+          <br><p> Aiden Benner 2017</p>
+        </div>
+
+
+        <div class="cust-foot-link col-md-4">
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/jquery.typeit/4.2.3/typeit.min.js"></script>   
+    <script src="/js/typed.js"></script>
+    <script src="/js/index_typer.js"></script>
+
+  </body>
+</html>

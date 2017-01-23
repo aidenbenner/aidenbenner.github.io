@@ -24,7 +24,7 @@ body a:hover { color: #FBFBFB; }
 
 span.avoidwrap { display: inline-block; }
 
-.about-bar { margin: 0px; padding: 0px; }
+.about-bar { margin: 0px; padding: 0px; margin-bottom: 1em; }
 
 /* small-large devices (tablets, 768px and up) */
 @media (min-width: 750px) { .about-bar { font-size: 1em; background-color: #0D8FFF; overflow: auto; padding-bottom: 1em; }
@@ -38,7 +38,9 @@ span.avoidwrap { display: inline-block; }
 
 .about p { margin: 0px; }
 
-.content h1 { color: #FF5500; }
+.content h1 { margin-bottom: 3px; margin-top: 0px; }
+
+.content h2 { margin-bottom: 3px; margin-top: 0px; }
 
 .content a { color: #FF5500; }
 
@@ -71,3 +73,4 @@ span.avoidwrap { display: inline-block; }
   to { right: 0px; } }
 @keyframes flyright { from { left: -1200px; }
   to { left: 0px; } }
+hr { border-color: black; backgound-color: black; color: black; }

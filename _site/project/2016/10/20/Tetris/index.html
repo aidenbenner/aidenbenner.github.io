@@ -49,15 +49,52 @@
 
 
         <hr>
-      {% for post in site.posts %}
+      
         <h3>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>&nbsp;&#45;&nbsp;<small><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span></small>
+          <a class="post-link" href="/project/2016/10/20/Neural-Network-for-OCR/">Neural Network For Ocr</a>&nbsp;&#45;&nbsp;<small><span class="post-meta">Oct 20, 2016</span></small>
         </h3>
-      {% endfor %}
+      
+        <h3>
+          <a class="post-link" href="/project/2016/10/20/Tetris/">Tetris</a>&nbsp;&#45;&nbsp;<small><span class="post-meta">Oct 20, 2016</span></small>
+        </h3>
+      
 
       </div>
       <div class = "col-md-8 col-md-pull-4">
-        {{ content }} 
+        <h1 id="tetronimo">Tetronimo</h1>
+<p>A simple block stacking puzzle game. Written in java for a grade 12 CS project.</p>
+
+<p>Puzzle pieces descend from the top of the screen. Manuever pieces to form full rows to get points.</p>
+
+<p>Clearing more rows at one time will get you more points.</p>
+
+<h1 id="controls">Controls</h1>
+<ul>
+  <li>Space - instant drop</li>
+  <li>A     - Rotate CW</li>
+  <li>D     - Rotate CC</li>
+  <li>Arrow Keys - Manuever piece</li>
+</ul>
+
+<h1 id="demo">Demo</h1>
+
+<p>Normal gameplay</p>
+
+<p><img src="http://i.imgur.com/0hz3fIu.png" alt="Gameplay" /></p>
+
+<p>Poor stacking</p>
+
+<p><img src="http://i.imgur.com/y8M62TP.png" alt="Poor stacking" /></p>
+
+<p>About to score</p>
+
+<p><img src="http://i.imgur.com/epF4KJN.png" alt="About to score" /></p>
+
+<p>About to lose</p>
+
+<p><img src="http://i.imgur.com/Lxi5hZ4.png" alt="About to lose" /></p>
+
+ 
       </div>
       <!-- <p><a href="aiden.benner@uwaterloo.ca">email</a> | <a href="github.com/aidenbenner"> github </a>  | resume </a> </p> --> 
     </div>

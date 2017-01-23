@@ -99,6 +99,7 @@ span.avoidwrap { display:inline-block; }
 .about-bar {
   margin:0px;
   padding:0px;
+  margin-bottom:1em;
 }
 
 /* small-large devices (tablets, 768px and up) */
@@ -150,7 +151,13 @@ span.avoidwrap { display:inline-block; }
 }
 
 .content h1 {
-  color:#FF5500;
+  margin-bottom:3px;
+  margin-top:0px;
+}
+
+.content h2 {
+  margin-bottom:3px;
+  margin-top:0px;
 }
 
 .content a {
@@ -216,5 +223,11 @@ span.avoidwrap { display:inline-block; }
 @keyframes flyright{
   from{left:-1200px}
   to{left:0px}
+}
+
+hr {
+  border-color:black;
+  backgound-color:black;
+  color:black;
 }
 
