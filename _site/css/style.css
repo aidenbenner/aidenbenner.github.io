@@ -38,9 +38,9 @@ span.avoidwrap { display: inline-block; }
 
 .about p { margin: 0px; }
 
-.content h1 { margin-bottom: 3px; margin-top: 0.5em; }
+.content h1 { margin-bottom: 3px; }
 
-.content h2 { margin-bottom: 3px; margin-top: 0px; }
+.content h2 { margin-bottom: 3px; }
 
 .content a { color: #FF5500; }
 
@@ -76,3 +76,5 @@ span.avoidwrap { display: inline-block; }
 hr { border-color: black; backgound-color: black; color: black; }
 
 .img-responsive { margin: 0 auto; width: 100%; }
+
+#profile-picture { margin-top: 1em; width: 60%; margin-bottom: 1em; }

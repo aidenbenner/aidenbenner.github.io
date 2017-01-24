@@ -32,6 +32,10 @@ body {
   padding:0px; 
 }    
 
+.sidebar {
+
+}
+
 .container-fluid{
   margin:0;
   padding:0;
@@ -152,12 +156,10 @@ span.avoidwrap { display:inline-block; }
 
 .content h1 {
   margin-bottom:3px;
-  margin-top:0.5em;
 }
 
 .content h2 {
   margin-bottom:3px;
-  margin-top:0px;
 }
 
 .content a {
@@ -234,5 +236,10 @@ hr {
 .img-responsive {
     margin: 0 auto;
     width:100%;
+}
+#profile-picture {
+  margin-top:1em; 
+  width:60%; 
+  margin-bottom:1em; 
 }
 
