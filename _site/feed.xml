@@ -5,8 +5,8 @@
     <description>My personal blog and portfolio.</description>
     <link>http://aidenbenner.github.io/</link>
     <atom:link href="http://aidenbenner.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 24 Jan 2017 00:39:34 -0500</pubDate>
-    <lastBuildDate>Tue, 24 Jan 2017 00:39:34 -0500</lastBuildDate>
+    <pubDate>Tue, 24 Jan 2017 00:56:54 -0500</pubDate>
+    <lastBuildDate>Tue, 24 Jan 2017 00:56:54 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -55,6 +55,19 @@
         <pubDate>Wed, 02 Mar 2016 20:17:01 -0500</pubDate>
         <link>http://aidenbenner.github.io/project/2016/03/02/FRC-4334-Robotcode/</link>
         <guid isPermaLink="true">http://aidenbenner.github.io/project/2016/03/02/FRC-4334-Robotcode/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>Vex Nothing But Net</title>
+        <description>
+</description>
+        <pubDate>Wed, 02 Mar 2016 20:17:01 -0500</pubDate>
+        <link>http://aidenbenner.github.io/project/2016/03/02/VEX-Nothing-But-Net/</link>
+        <guid isPermaLink="true">http://aidenbenner.github.io/project/2016/03/02/VEX-Nothing-But-Net/</guid>
         
         
         <category>project</category>
