@@ -5,8 +5,8 @@
     <description>My personal blog and portfolio.</description>
     <link>http://aidenbenner.github.io/</link>
     <atom:link href="http://aidenbenner.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 24 Jan 2017 00:00:55 -0500</pubDate>
-    <lastBuildDate>Tue, 24 Jan 2017 00:00:55 -0500</lastBuildDate>
+    <pubDate>Tue, 24 Jan 2017 00:34:55 -0500</pubDate>
+    <lastBuildDate>Tue, 24 Jan 2017 00:34:55 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -49,7 +49,20 @@
       </item>
     
       <item>
-        <title>Neural Network For Ocr</title>
+        <title>Frc 4334 Robotcode</title>
+        <description>
+</description>
+        <pubDate>Wed, 02 Mar 2016 20:17:01 -0500</pubDate>
+        <link>http://aidenbenner.github.io/project/2016/03/02/FRC-4334-Robotcode/</link>
+        <guid isPermaLink="true">http://aidenbenner.github.io/project/2016/03/02/FRC-4334-Robotcode/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>Neural Net For Ocr</title>
         <description>&lt;h1 id=&quot;handwritingann&quot;&gt;Handwriting_ANN&lt;/h1&gt;
 &lt;p&gt;Convert images of handwriting to digital text using neural networks.
 Created for grade 12 Computer Science IB IA.
@@ -125,8 +138,8 @@ constant, and received very positive results (see appendix).&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 12 Jan 2016 18:17:01 -0500</pubDate>
-        <link>http://aidenbenner.github.io/project/2016/01/12/Neural-Network-for-OCR/</link>
-        <guid isPermaLink="true">http://aidenbenner.github.io/project/2016/01/12/Neural-Network-for-OCR/</guid>
+        <link>http://aidenbenner.github.io/project/2016/01/12/Neural-Net-for-OCR/</link>
+        <guid isPermaLink="true">http://aidenbenner.github.io/project/2016/01/12/Neural-Net-for-OCR/</guid>
         
         
         <category>project</category>

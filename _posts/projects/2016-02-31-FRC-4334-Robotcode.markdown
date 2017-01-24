@@ -1,0 +1,9 @@
+---
+layout: main
+tite: FRC Stronghold 2016 
+date:   2016-02-31 20:17:01
+categories: project
+github: https://github.com/aidenbenner/robot-code16
+img: https://i.imgur.com/lshX52sh.jpg 
+header: The code used to power Team 4334's FRC Robot for the 2016 game FIRST Stronghold. Check out our blue alliance page <a href="https://www.thebluealliance.com/team/4334/2016"> here </a>
+---
