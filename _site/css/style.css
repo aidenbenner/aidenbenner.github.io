@@ -27,7 +27,7 @@ span.avoidwrap { display: inline-block; }
 .about-bar { margin: 0px; padding: 0px; margin-bottom: 1em; }
 
 /* small-large devices (tablets, 768px and up) */
-@media (min-width: 750px) { .about-bar { font-size: 1em; background-color: #0D8FFF; overflow: auto; padding-bottom: 1em; }
+@media (min-width: 750px) { .about-bar { font-size: 1.4em; background-color: #0D8FFF; overflow: auto; padding-bottom: 1em; }
   .new-nav { margin-top: 6em; } }
 /* extra small < 768px  */
 @media (max-width: 750px) { #name-top p { font-size: 2.4em; }
@@ -38,7 +38,7 @@ span.avoidwrap { display: inline-block; }
 
 .about p { margin: 0px; }
 
-.content h1 { margin-bottom: 3px; margin-top: 0px; }
+.content h1 { margin-bottom: 3px; margin-top: 0.5em; }
 
 .content h2 { margin-bottom: 3px; margin-top: 0px; }
 

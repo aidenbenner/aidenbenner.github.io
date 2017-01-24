@@ -5,9 +5,22 @@
     <description>My personal blog and portfolio.</description>
     <link>http://aidenbenner.github.io/</link>
     <atom:link href="http://aidenbenner.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 23 Jan 2017 00:58:42 -0500</pubDate>
-    <lastBuildDate>Mon, 23 Jan 2017 00:58:42 -0500</lastBuildDate>
+    <pubDate>Mon, 23 Jan 2017 23:24:43 -0500</pubDate>
+    <lastBuildDate>Mon, 23 Jan 2017 23:24:43 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Orbit Assistant</title>
+        <description>
+</description>
+        <pubDate>Tue, 25 Oct 2016 19:17:01 -0400</pubDate>
+        <link>http://aidenbenner.github.io/project/2016/10/25/Orbit-Assistant/</link>
+        <guid isPermaLink="true">http://aidenbenner.github.io/project/2016/10/25/Orbit-Assistant/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
     
       <item>
         <title>Matrix Utils</title>

@@ -17,8 +17,8 @@ layout: main
 
     {% for post in site.posts %}
     <h1> <a href="{{post.github}}">{{post.title}} </a> <br> <small><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span></small></h1>
-    <h3> {{post.header}} </h3>
     <img src="{{post.img}}" class="img-responsive img-rounded"> 
+    <h3> {{post.header}} </h3>
     <br>
     <hr>
     {% endfor %} 
