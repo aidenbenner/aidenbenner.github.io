@@ -60,62 +60,15 @@ ga('send', 'pageview');
         <p> You can contact me by <a href="mailto:abenner@uwaterloo.ca" title="abenner@uwaterloo.ca">email</a>. You can also find me on <a href="https://github.com/aidenbenner">github.</a></p>
 
         <hr>
-        
+        {% for post in site.posts %}
         <h3>
-          <a class="post-link" href="https://github.com/aidenbenner/orbit-assistant">Orbit Assistant</a>&nbsp;&#45;&nbsp;<small><span class="post-meta">Oct 25, 2016</span></small>
+          <a class="post-link" href="{{ post.github }}">{{ post.title }}</a>&nbsp;&#45;&nbsp;<small><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span></small>
         </h3>
-        
-        <h3>
-          <a class="post-link" href="https://github.com/aidenbenner/matrix-utils">Matrix Utils</a>&nbsp;&#45;&nbsp;<small><span class="post-meta">Oct 20, 2016</span></small>
-        </h3>
-        
-        <h3>
-          <a class="post-link" href="https://github.com/aidenbenner/diamond-square">Diamond Square</a>&nbsp;&#45;&nbsp;<small><span class="post-meta">Mar 21, 2016</span></small>
-        </h3>
-        
-        <h3>
-          <a class="post-link" href="https://github.com/aidenbenner/robot-code16">Frc 4334 Robotcode</a>&nbsp;&#45;&nbsp;<small><span class="post-meta">Mar 2, 2016</span></small>
-        </h3>
-        
-        <h3>
-          <a class="post-link" href="https://github.com/aidenbenner/vex-robotics-3388-nothing-but-net">Vex Nothing But Net</a>&nbsp;&#45;&nbsp;<small><span class="post-meta">Mar 2, 2016</span></small>
-        </h3>
-        
-        <h3>
-          <a class="post-link" href="https://github.com/aidenbenner/handwriting-ann">Neural Net For Ocr</a>&nbsp;&#45;&nbsp;<small><span class="post-meta">Jan 12, 2016</span></small>
-        </h3>
-        
-        <h3>
-          <a class="post-link" href="https://github.com/aidenbenner/gravity-sim">Gravity Sim</a>&nbsp;&#45;&nbsp;<small><span class="post-meta">Nov 21, 2015</span></small>
-        </h3>
-        
-        <h3>
-          <a class="post-link" href="https://github.com/aidenbenner/tetris-clone">Tetris</a>&nbsp;&#45;&nbsp;<small><span class="post-meta">Oct 24, 2015</span></small>
-        </h3>
-        
+        {% endfor %}
 
       </div>
       <div class = "col-md-8 col-md-pull-4">
-        <p>A simulation of gravity between stellar bodies. Written in Java for a grade 11 CS project.</p>
-
-<p>After inputting the initial parameters, a number of small, medium and large masses are added to the simulation. The bodies then interact through simulation of a graviational force using a user defined gravitational constant. The initial velocity and initial mass is randomly generated for each body.</p>
-
-<p>Bodies with high mass are identified with red, medium with green and low with blue. Within each mass group, relative mass is determined by size (bigger the circle = the greater the mass).</p>
-
-<p>A fixed central body can also be added. The value of the gravitational constant is requested on start. A constant &lt; 1 is suggested.</p>
-
-<h1 id="demo">Demo</h1>
-<p><img src="http://i.imgur.com/z68Dktf.png" alt="central body with few small" />
-Above shows a fixed central body with around 20 or so smaller bodies orbiting/drifting.</p>
-
-<p><img src="http://i.imgur.com/ETKukZi.png" alt="screenshot chaotic" />
-Here is a slightly more hectic scenario with a decent number of red, blue and green masses all drifting freely.</p>
-
-<p><img src="http://i.imgur.com/WMhjmPY.png" alt="screenshot 100+ bodies" />
-100+ small bodies, 20+ medium, 20+ large
-This one was a little bit crazy.</p>
-
- 
+        {{ content }} 
       </div>
       <!-- <p><a href="aiden.benner@uwaterloo.ca">email</a> | <a href="github.com/aidenbenner"> github </a>  | resume </a> </p> --> 
     </div>
