@@ -75,6 +75,7 @@ body {
   line-height:0.7em;
 }
 
+
 .namecard h2 {
   text-align:left;
   line-height:0em;
@@ -93,7 +94,7 @@ body {
 }
 
 #name-top p {
-  font-size:3.5em; 
+  font-size:2.5em; 
   line-height:1em;
   margin-bottom:0px; 
 }
@@ -150,12 +151,30 @@ span.avoidwrap { display:inline-block; }
   color:$header-secondary-col;
 }
 
+.project h1 a {
+  color:#FF5500; 
+}
+
+.project p {
+  margin-top:0.5em;
+  line-height:1;
+  font-size:1em;
+}
+
+.project h1 {
+  text-align:center;
+  font-size:2em;
+  color:#FF5500; 
+}
+
 .about p {
   margin:0px; 
 }
 
 .content h1 {
-  margin-bottom:3px;
+  margin-bottom:10px;
+  text-align:center;
+
 }
 
 .content h2 {
@@ -168,6 +187,13 @@ span.avoidwrap { display:inline-block; }
 
 .content a:hover {
   color:#FF5500;
+}
+
+.content p {
+  font-size:1.2em;
+  line-height:1.5;
+  text-align:center;
+    
 }
 
 .typed{
@@ -236,10 +262,13 @@ hr {
 .img-responsive {
     margin: 0 auto;
     width:100%;
+    height:200px;
+    object-fit:cover;
 }
+
 #profile-picture {
   margin-top:1em; 
-  width:60%; 
+  width:5em; 
   margin-bottom:1em; 
 }
 

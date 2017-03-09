@@ -20,7 +20,7 @@ body a:hover { color: #FBFBFB; }
 
 .namecard h3 { text-align: left; line-height: 0; }
 
-#name-top p { font-size: 3.5em; line-height: 1em; margin-bottom: 0px; }
+#name-top p { font-size: 2.5em; line-height: 1em; margin-bottom: 0px; }
 
 span.avoidwrap { display: inline-block; }
 
@@ -36,15 +36,23 @@ span.avoidwrap { display: inline-block; }
   .new-nav { margin-top: 1em; } }
 .about { margin-top: 10em; text-align: left; font-size: 1.5em; color: #EAEAEA; }
 
+.project h1 a { color: #FF5500; }
+
+.project p { margin-top: 0.5em; line-height: 1; font-size: 1em; }
+
+.project h1 { text-align: center; font-size: 2em; color: #FF5500; }
+
 .about p { margin: 0px; }
 
-.content h1 { margin-bottom: 3px; }
+.content h1 { margin-bottom: 10px; text-align: center; }
 
 .content h2 { margin-bottom: 3px; }
 
 .content a { color: #FF5500; }
 
 .content a:hover { color: #FF5500; }
+
+.content p { font-size: 1.2em; line-height: 1.5; text-align: center; }
 
 .typed { margin-top: 6em; }
 
@@ -75,6 +83,6 @@ span.avoidwrap { display: inline-block; }
   to { left: 0px; } }
 hr { border-color: black; backgound-color: black; color: black; }
 
-.img-responsive { margin: 0 auto; width: 100%; }
+.img-responsive { margin: 0 auto; width: 100%; height: 200px; object-fit: cover; }
 
-#profile-picture { margin-top: 1em; width: 60%; margin-bottom: 1em; }
+#profile-picture { margin-top: 1em; width: 5em; margin-bottom: 1em; }

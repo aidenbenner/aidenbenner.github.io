@@ -6,21 +6,36 @@ layout: main
 
 
   <!-- 
-  <ul class="posts">
+    <ul class="posts">
     {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
+    <li>
+    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </li>
     {% endfor %}
     </ul> --> 
 
-    {% for post in site.posts %}
-    <h1> <a href="{{post.github}}">{{post.title}} </a> <br> <small><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span></small></h1>
-    <img src="{{post.img}}" class="img-responsive img-rounded"> 
-    <h3> {{post.header}} </h3>
-    <br>
-    <hr>
-    {% endfor %} 
+
+    {% assign loopindex = 0 %}
+    {% for post in site.posts%}                       
+    {% assign loopindex = loopindex | plus: 1 %}
+    {% assign rowfinder = loopindex | modulo: 4 %}
+    {% if rowfinder == 0%}
+    <div class="row">
+      {% endif %}
+
+      <div class="project col-md-4">     
+        <h1> <a href="{{post.github}}">{{post.title}} </a> <br> <small><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span></small></h1>
+        <img src="{{post.img}}" class="img-responsive img-rounded"> 
+        <p> {{post.header}} </p>
+        <br>
+      </div>
+    {% if rowfinder == 2%}
+        </div >
+    {% endif %}
+    {% endfor %}
+</div>
+
+
 
 </div>

@@ -5,7 +5,7 @@ date:   2016-01-12 23:17:01
 categories: project
 github: https://github.com/aidenbenner/handwriting-ann
 img: http://i.imgur.com/JXKyPYC.png
-header: Segments and reads images of printed text to using neural networks.
+header: Segments and reads images of printed text using neural networks.
 ---
 # Handwriting_ANN
 Convert images of handwriting to digital text using neural networks.
