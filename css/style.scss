@@ -19,6 +19,7 @@ $main-font: 'Roboto', sans-serif;
 $type-font:$code-font;
 
 body { 
+  scroll-behavior: smooth;
   font-family:$main-font;
   background-color:$primary-background;
   overflow-x: hidden;
@@ -34,6 +35,10 @@ body {
 
 .sidebar {
 
+}
+
+.container {
+  width:700px; 
 }
 
 .container-fluid{
@@ -152,17 +157,18 @@ span.avoidwrap { display:inline-block; }
 }
 
 .project h1 a {
-  color:#FF5500; 
+  color: black; //#FF5500; 
 }
 
 .project p {
   margin-top:0.5em;
   line-height:1;
   font-size:1em;
+  text-justify:inter-word;
 }
 
 .project h1 {
-  text-align:center;
+  text-align:left;
   font-size:2em;
   color:#FF5500; 
 }
@@ -173,8 +179,7 @@ span.avoidwrap { display:inline-block; }
 
 .content h1 {
   margin-bottom:10px;
-  text-align:center;
-
+  text-align:left;
 }
 
 .content h2 {
@@ -192,7 +197,7 @@ span.avoidwrap { display:inline-block; }
 .content p {
   font-size:1.2em;
   line-height:1.5;
-  text-align:center;
+  text-align:left;
     
 }
 
@@ -260,9 +265,9 @@ hr {
 }
 
 .img-responsive {
-    margin: 0 auto;
-    width:100%;
-    height:200px;
+  width:200px;
+  height:200px; 
+    margin: 10px;
     object-fit:cover;
 }
 
