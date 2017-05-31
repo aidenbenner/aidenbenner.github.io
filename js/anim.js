@@ -86,6 +86,11 @@ function draw() {
   }
 }
 
+//don't laugh... draw + tick 
+function dick() {
+  tick(); 
+  draw(); 
+  window.requestAnimationFrame(dick);
+}
+window.requestAnimationFrame(dick);
 
-setInterval(tick, 5); 
-setInterval(draw, 5); 
