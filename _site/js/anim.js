@@ -2,7 +2,7 @@ var canvas = document.getElementById('can');
 var ctx = canvas.getContext('2d');
 // ctx.globalCompositeOperation = "multiply";
 
-var xmax = canvas.width = 1920; 
+var xmax = canvas.width = window.innerWidth; 
 var ymax = canvas.height = 1080; 
 var rmax = canvas.width / 10; 
 var rmin  = 20;
@@ -46,6 +46,8 @@ function rgbatostr(r,g,b,a){
 }
 
 function tick() {
+  if(xmax != window.innerWidth)
+    xmax = canvas.width = window.innerWidth; 
   for(var i = 0; i<circNum; i++){
     circles[i].x += circles[i].vx; 
     circles[i].y += circles[i].vy; 
