@@ -37,6 +37,11 @@ body {
 
 }
 
+
+.content-section {
+  background-color: $primary-background;
+}
+
 .container {
   width:700px; 
 }
@@ -222,6 +227,9 @@ span.avoidwrap { display:inline-block; }
 
 .about p {
   margin:0px; 
+}
+
+.content {
 }
 
 .content h1 {

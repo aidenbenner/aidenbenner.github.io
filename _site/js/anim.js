@@ -8,16 +8,16 @@ var rmax = canvas.width / 10;
 var rmin  = 20;
 
 var circles = []; 
-var circNum = 30; 
+var circNum = 40; 
 
 var maxv = 1; 
 
 for(var i = 0; i<circNum; i++){
   var col = new Object(); 
-  var up = 220; 
-  col.r = Math.random() * (255 - up)  + up; 
-  col.g = Math.random() * (255 - up) + up; 
-  col.b = Math.random() * (255 - up)+ up; 
+  var up = 180; 
+  col.r = Math.random() * (215 - up)  + up; 
+  col.g = Math.random() * (215 - up) + up; 
+  col.b = Math.random() * (215 - up)+ up; 
   col.r = Math.round(col.r); 
   col.g = Math.round(col.g); 
   col.b = Math.round(col.b); 

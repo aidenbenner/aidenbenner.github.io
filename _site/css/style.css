@@ -9,6 +9,9 @@ body {
   body a:hover {
     color: #FBFBFB; }
 
+.content-section {
+  background-color: #EAEAEA; }
+
 .container {
   width: 700px; }
 
