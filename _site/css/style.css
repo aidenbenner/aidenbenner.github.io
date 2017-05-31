@@ -76,16 +76,7 @@ span.avoidwrap {
 .about-bar {
   margin: 0px;
   padding: 0px;
-  margin-bottom: 1em;
-  -webkit-animation: fadein 4s;
-  /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 4s;
-  /* Firefox < 16 */
-  -ms-animation: fadein 4s;
-  /* Internet Explorer */
-  -o-animation: fadein 4s;
-  /* Opera < 12.1 */
-  animation: fadein 4s; }
+  margin-bottom: 1em; }
 
 @keyframes fadein {
   from {
@@ -125,6 +116,39 @@ span.avoidwrap {
 
   .new-nav {
     margin-top: 6em; } }
+.about-top {
+  -webkit-animation: fadein 4s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 4s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 4s;
+  /* Internet Explorer */
+  -o-animation: fadein 4s;
+  /* Opera < 12.1 */
+  animation: fadein 4s; }
+
+.new-nav {
+  -webkit-animation: fadein 6s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 6s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 6s;
+  /* Internet Explorer */
+  -o-animation: fadein 6s;
+  /* Opera < 12.1 */
+  animation: fadein 6s; }
+
+#name-top {
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 2s;
+  /* Internet Explorer */
+  -o-animation: fadein 2s;
+  /* Opera < 12.1 */
+  animation: fadein 2s; }
+
 /* extra small < 768px  */
 @media (max-width: 750px) {
   #name-top p {
