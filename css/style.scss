@@ -172,6 +172,32 @@ span.avoidwrap { display:inline-block; }
   }
 }
 
+#links {
+  width:100%; 
+  display:inline-block; 
+  text-align:center;
+    -webkit-animation: fadein 8s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 8s; /* Firefox < 16 */
+        -ms-animation: fadein 8s; /* Internet Explorer */
+         -o-animation: fadein 8s; /* Opera < 12.1 */
+            animation: fadein 8s;
+}
+.fa {
+  margin-left:0.2em; 
+  margin-right:0.2em; 
+  margin-top:0.2em;
+}
+
+#resumelink{
+  margin-top:100px; 
+    -webkit-animation: fadein 6s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 6s; /* Firefox < 16 */
+        -ms-animation: fadein 6s; /* Internet Explorer */
+         -o-animation: fadein 6s; /* Opera < 12.1 */
+            animation: fadein 6s;
+            text-align:center;
+            font-size:1.5em; 
+}
 .about-top{
     -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 4s; /* Firefox < 16 */
