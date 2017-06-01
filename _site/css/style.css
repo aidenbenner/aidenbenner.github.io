@@ -130,6 +130,9 @@ span.avoidwrap {
   /* Opera < 12.1 */
   animation: fadein 8s; }
 
+a:hover {
+  text-decoration: none; }
+
 .fa {
   margin-left: 0.2em;
   margin-right: 0.2em;
@@ -148,6 +151,8 @@ span.avoidwrap {
   animation: fadein 6s;
   text-align: center;
   font-size: 1.5em; }
+  #resumelink a:hover {
+    text-decoration: underline; }
 
 .about-top {
   -webkit-animation: fadein 4s;

@@ -182,6 +182,11 @@ span.avoidwrap { display:inline-block; }
          -o-animation: fadein 8s; /* Opera < 12.1 */
             animation: fadein 8s;
 }
+
+a:hover {
+  text-decoration:none;
+}
+
 .fa {
   margin-left:0.2em; 
   margin-right:0.2em; 
@@ -189,6 +194,9 @@ span.avoidwrap { display:inline-block; }
 }
 
 #resumelink{
+  a:hover {
+    text-decoration:underline;
+  }
   margin-top:100px; 
     -webkit-animation: fadein 6s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 6s; /* Firefox < 16 */
