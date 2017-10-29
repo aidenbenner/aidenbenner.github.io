@@ -3,7 +3,7 @@ var ctx = canvas.getContext('2d');
 // ctx.globalCompositeOperation = "multiply";
 
 var xmax = canvas.width = window.innerWidth; 
-var ymax = canvas.height = 1080; 
+var ymax = canvas.height = window.innerHeight; 
 var rmax = canvas.width / 10; 
 var rmin  = 20;
 
