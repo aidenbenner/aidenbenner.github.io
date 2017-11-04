@@ -1,21 +1,36 @@
-var p_115 = document.getElementById("115");
-var p_117 = document.getElementById("117");
-var p_137  = document.getElementById("137");
-var p_140 = document.getElementById("140");
-var p_105 = document.getElementById("105");
+var Exam = class {
+  constructor(name, datestr) {
+    this.name = name
+    this.date = new Date(datestr)
+  }
+}
 
-var today = new Date();
-var d_117 = new Date("December 8, 2016 14:00:00");
-var d_140 = new Date("December 10, 2016 12:30:00");
-var d_115 = new Date("December 12, 2016 18:30:00");
-var d_137 = new Date("December 15, 2016 12:30:00");
-var d_105 = new Date("December 16, 2016 12:30:00");
+var exams = [] 
+exams.push(new Exam("ECE 222", "December 7, 2017 9:00:00"))
+exams.push(new Exam("CS 241E", "December 9, 2017 12:30:00"))
+exams.push(new Exam("STAT 206 ", "December 12, 2017 4:00:00"))
+exams.push(new Exam("SE 212", "December 14, 2017 12:30:00"))
+exams.push(new Exam("CHE 102", "December 19, 2017 9:00:00"))
+
+var pairs = [] 
 
 function pad_2_dig(a)
 {
   if(a < 10)
     return "0" + a; 
   return a + "";
+}
+
+for(var i = 0; i<exams.length; i++ ){
+  var div = document.createElement("div")
+  var h = document.createElement("h2")
+  var p = document.createElement("p")
+  h.innerHTML = exams[i].name
+  div.appendChild(h)
+  div.appendChild(p)
+
+  pairs.push(p)
+  document.getElementById("title").appendChild(div)
 }
 
 function date_diff_str(a,b)
@@ -35,22 +50,20 @@ function date_diff_str(a,b)
 
   seconds = Math.abs(seconds);
   minutes = Math.abs(minutes);
-  hours  = Math.abs(hours );
+  hours  = Math.abs(hours);
   days = Math.abs(days); 
 
   return days + ":" + pad_2_dig(hours) + ":" + pad_2_dig(minutes) + ":" + pad_2_dig(seconds); 
 }
 
-p_117.value = "test";
 function tick ()
 {
   today = new Date();
-  p_115.innerHTML = date_diff_str(today.getTime(),d_115.getTime());
-  p_117.innerHTML = date_diff_str(today.getTime(),d_117.getTime());
-  p_137.innerHTML = date_diff_str(today.getTime(),d_137.getTime());
-  p_140.innerHTML = date_diff_str(today.getTime(),d_140.getTime());
-  p_105.innerHTML = date_diff_str(today.getTime(),d_105.getTime());
+  for(var i = 0; i<exams.length; i++ ){
+    pairs[i].innerHTML = date_diff_str(today.getTime(), exams[i].date.getTime())
+  }
 }
+
 tick();
 
 setInterval(tick,1000);

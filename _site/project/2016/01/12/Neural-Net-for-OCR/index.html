@@ -106,9 +106,9 @@ decreasing the learning constant so the network can converge on the ideal weight
 backpropagation algorithm I tried training it on a sine function in order to debug and to tune the network and learning
 constant, and received very positive results (see appendix).</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>	<span class="c1">//BACKPROP</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code>	<span class="c1">//BACKPROP</span>
 	<span class="kt">double</span> <span class="n">biasChange</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-	<span class="kd">public</span> <span class="kt">void</span> <span class="n">adjustWeights</span><span class="o">(</span> <span class="kt">double</span> <span class="n">h</span><span class="o">){</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">adjustWeights</span><span class="o">(</span> <span class="kt">double</span> <span class="n">h</span><span class="o">){</span>
 		<span class="c1">//brings output from forward, delta from last </span>
 		<span class="k">if</span><span class="o">(!</span><span class="n">inputLayer</span><span class="o">){</span>
 			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">weights</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
@@ -123,7 +123,7 @@ constant, and received very positive results (see appendix).</p>
 		<span class="c1">//System.out.println(delta + " " + weight + " ");</span>
 	<span class="o">}</span>
 	
-	<span class="kd">public</span> <span class="kt">double</span> <span class="n">getDelta</span><span class="o">(</span><span class="kt">double</span><span class="o">[]</span> <span class="n">error</span><span class="o">,</span> <span class="n">Neuron</span><span class="o">[]</span> <span class="n">fwdLayer</span><span class="o">,</span> <span class="kt">int</span> <span class="n">index</span><span class="o">){</span>
+	<span class="kd">public</span> <span class="kt">double</span> <span class="nf">getDelta</span><span class="o">(</span><span class="kt">double</span><span class="o">[]</span> <span class="n">error</span><span class="o">,</span> <span class="n">Neuron</span><span class="o">[]</span> <span class="n">fwdLayer</span><span class="o">,</span> <span class="kt">int</span> <span class="n">index</span><span class="o">){</span>
 		<span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
 		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">error</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
 			<span class="n">sum</span> <span class="o">+=</span> <span class="n">fwdLayer</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">currDelta</span> <span class="o">*</span> <span class="n">fwdLayer</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">weights</span><span class="o">[</span><span class="n">index</span><span class="o">];</span>
