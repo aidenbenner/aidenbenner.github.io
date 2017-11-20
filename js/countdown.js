@@ -11,6 +11,7 @@ exams.push(new Exam("CS 241E", "December 9, 2017 12:30:00"))
 exams.push(new Exam("STAT 206 ", "December 12, 2017 4:00:00"))
 exams.push(new Exam("SE 212", "December 14, 2017 12:30:00"))
 exams.push(new Exam("CHE 102", "December 19, 2017 9:00:00"))
+exams.push(new Exam("Matt Ho extorts $125 from Yuming He", "December 1, 2017 0:00:00"))
 
 var pairs = [] 
 
