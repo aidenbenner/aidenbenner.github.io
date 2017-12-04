@@ -11,6 +11,8 @@ exams.push(new Exam("CS 241E", "December 9, 2017 12:30:00"))
 exams.push(new Exam("STAT 206 ", "December 12, 2017 4:00:00"))
 exams.push(new Exam("SE 212", "December 14, 2017 12:30:00"))
 exams.push(new Exam("CHE 102", "December 19, 2017 9:00:00"))
+exams.push(new Exam("test ", "December 4, 2017 13:00:00"))
+exams.push(new Exam("test 2", "December 4, 2017 14:00:00"))
 
 var pairs = [] 
 
@@ -36,6 +38,7 @@ for(var i = 0; i<exams.length; i++ ){
 function date_diff_str(a,b)
 {
   var diff_ms = b - a; 
+  if(diff_ms < 0) return "DONE"
   var seconds = diff_ms / 1000; 
   var minutes = seconds / 60; 
   var hours = minutes / 60; 
