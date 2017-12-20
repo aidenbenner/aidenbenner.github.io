@@ -2,6 +2,7 @@ var canvas = document.getElementById('can');
 var ctx = canvas.getContext('2d');
 // ctx.globalCompositeOperation = "multiply";
 
+
 var xmax = canvas.width = window.innerWidth; 
 var ymax = canvas.height = window.innerHeight; 
 var rmax = canvas.width / 10; 
@@ -86,11 +87,15 @@ function draw() {
   }
 }
 
-//don't laugh... draw + tick 
-function dick() {
+
+function drawt() {
+  xmax = canvas.width = window.innerWidth; 
+  ymax = canvas.height = window.innerHeight; 
+  rmax = canvas.width / 10; 
+  rmin  = 20;
   tick(); 
   draw(); 
-  window.requestAnimationFrame(dick);
+  window.requestAnimationFrame(drawt);
 }
-window.requestAnimationFrame(dick);
+window.requestAnimationFrame(drawt);
 
