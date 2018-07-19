@@ -5,9 +5,9 @@
     <description>My personal blog and portfolio.</description>
     <link>http://aidenbenner.github.io/</link>
     <atom:link href="http://aidenbenner.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 20 Dec 2017 03:01:40 -0500</pubDate>
-    <lastBuildDate>Wed, 20 Dec 2017 03:01:40 -0500</lastBuildDate>
-    <generator>Jekyll v3.2.1</generator>
+    <pubDate>Wed, 18 Jul 2018 20:37:48 -0400</pubDate>
+    <lastBuildDate>Wed, 18 Jul 2018 20:37:48 -0400</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>Test Post</title>
@@ -110,7 +110,7 @@
     
       <item>
         <title>Neural Net For Ocr</title>
-        <description>&lt;h1 id=&quot;handwritingann&quot;&gt;Handwriting_ANN&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;handwriting_ann&quot;&gt;Handwriting_ANN&lt;/h1&gt;
 &lt;p&gt;Convert images of handwriting to digital text using neural networks.
 Created for grade 12 Computer Science IB IA.
 Implemented using Java and Opencv.&lt;/p&gt;
@@ -139,7 +139,7 @@ decreasing the learning constant so the network can converge on the ideal weight
 backpropagation algorithm I tried training it on a sine function in order to debug and to tune the network and learning
 constant, and received very positive results (see appendix).&lt;/p&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;c1&quot;&gt;//BACKPROP&lt;/span&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;c1&quot;&gt;//BACKPROP&lt;/span&gt;
 	&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;biasChange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;adjustWeights&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
 		&lt;span class=&quot;c1&quot;&gt;//brings output from forward, delta from last &lt;/span&gt;
@@ -164,8 +164,7 @@ constant, and received very positive results (see appendix).&lt;/p&gt;
 		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currDelta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lastOutput&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lastOutput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
 		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currDelta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;training&quot;&gt;Training&lt;/h2&gt;
 

@@ -77,7 +77,7 @@ ga('send', 'pageview');
 
         <h1 id="project-head"> Projects </h1>
 
-        <h1 id="handwritingann">Handwriting_ANN</h1>
+        <h1 id="handwriting_ann">Handwriting_ANN</h1>
 <p>Convert images of handwriting to digital text using neural networks.
 Created for grade 12 Computer Science IB IA.
 Implemented using Java and Opencv.</p>
@@ -106,7 +106,7 @@ decreasing the learning constant so the network can converge on the ideal weight
 backpropagation algorithm I tried training it on a sine function in order to debug and to tune the network and learning
 constant, and received very positive results (see appendix).</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code>	<span class="c1">//BACKPROP</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="c1">//BACKPROP</span>
 	<span class="kt">double</span> <span class="n">biasChange</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
 	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">adjustWeights</span><span class="o">(</span> <span class="kt">double</span> <span class="n">h</span><span class="o">){</span>
 		<span class="c1">//brings output from forward, delta from last </span>
@@ -131,8 +131,7 @@ constant, and received very positive results (see appendix).</p>
 		<span class="k">this</span><span class="o">.</span><span class="na">currDelta</span> <span class="o">=</span> <span class="o">(</span><span class="n">lastOutput</span> <span class="o">*</span> <span class="o">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">lastOutput</span><span class="o">)</span> <span class="o">*</span> <span class="o">(</span><span class="n">sum</span><span class="o">));</span>
 		<span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">currDelta</span><span class="o">;</span>
 	<span class="o">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="training">Training</h2>
 
