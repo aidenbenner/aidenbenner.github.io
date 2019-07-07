@@ -1,12 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <title>Aiden Benner - University of Waterloo </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1; minimum-scale=1;">
+  <style>
+    body { margin: 0; }
+    canvas { width: 100%; height: 100% }
+  </style>
+</head>
+
+<body>
+<div id="container"></div>
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto|Source+Code+Pro" rel="stylesheet">
+<script src="https://use.fontawesome.com/a1281f6236.js"></script>
+
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-90751061-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<canvas id='can'> </canvas>
+<div class="container-fluid about-bar">
+  <div class="container about">
+    <div id="intro-text">
+      <div id="name-top">
+        <p> Aiden Benner </p>
+      </div>
+      <div class="about-top">
+        <p>3B Software Engineering |
+          <span class="avoidwrap"> University of Waterloo </span></p>
+      </div>
+    </div>
+
+    <div id='links'>
+      <a style="text-align:center border:1px" href="/resume.pdf">
+        <i class="fa fa-file" aria-hidden="true"></i>
+      </a>
+      <a href="mailto:aiden.benner@gmail.ca">
+        <i class="fa fa-envelope fa" aria-hidden="true"></i>
+      </a>
+      <a href="http://github.com/aidenbenner">
+        <i class="fa fa-github fa" aria-hidden="true"></i>
+      </a>
+      <a href="https://ca.linkedin.com/in/aiden-benner-442b84122">
+        <i class="fa fa-linkedin fa" aria-hidden="true"></i>
+      </a>
+    </div>
+
+  </div>
+
+<script type="module">
+import * as THREE from '/js/three.module.js';
+
+var scene = new THREE.Scene();
+var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+var can = document.getElementById("can")
+var renderer = new THREE.WebGLRenderer({canvas: can});
+renderer.setSize( window.innerWidth, window.innerHeight );
+document.body.appendChild( renderer.domElement );
+
+let numCubes = 15;
+
+const bigCube = new THREE.Object3D()
+let cubes = []
+for (let i = 0; i<numCubes; i++) {
+    for (let k = 0; k<numCubes; k++) {
+        for (let z = 0; z<numCubes; z++) {
+            var geometry = new THREE.SphereGeometry(0.1, 0.1, 0.1);
+            var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
+            var cube = new THREE.Mesh(geometry, material);
+            if (i == 0 || k == 0 || z == 0 || i == numCubes - 1|| k == numCubes - 1 || z == numCubes - 1)  {
+                const offset = 1.1
+                cube.position.x = i * offset - numCubes / 2 * offset
+                cube.position.y = k * offset - numCubes / 2 * offset
+                cube.position.z = z * offset - numCubes / 2 * offset
+                bigCube.add(cube);
+                cubes.push(cube)
+            }
+        }
+    }
+}
+
+cubes.sort((a, b) => {
+    let adist = a.position.x + a.position.y + a.position.z
+    let bdist = b.position.x + b.position.y + b.position.z
+    if (adist > bdist) return 1;
+    if (adist < bdist) return -1;
+    return 0;
+})
+
+scene.add(bigCube)
+
+camera.position.z = 5;
+
+const colorDelayMs = 5000
+const colorTransitionMs = 4000
+const startTime = new Date().getTime()
+
+let currCol = 0
+let i = 0
+function animate() {
+	requestAnimationFrame( animate );
+
+	let currTime = new Date().getTime()  - startTime
+
+    if (currCol * colorDelayMs < currTime) {
+        currCol += 1
+    }
+
+	new Date().getTime()
+
+	const colorCnst = 10000
+
+    const deltaTime = currTime % colorDelayMs
+    let cubeN = Math.min(deltaTime / colorTransitionMs) * cubes.length
+	cubes.forEach((cube, idx) => {
+	    // (i + 2 * idx) % colorCnst / colorCnst
+        if (idx < cubeN) {
+            cube.material.color.setHSL((Math.min(deltaTime / colorTransitionMs, 2) / 2.0 + currCol) / 5.0 , 1.0, 0.5);
+        }
+    })
+    i += 1
+
+    const canvas = renderer.domElement;
+    camera.aspect = canvas.clientWidth / canvas.clientHeight;
+    camera.updateProjectionMatrix();
+	bigCube.rotation.x += 0.001
+    bigCube.rotation.y += 0.001
+	renderer.render( scene, camera );
+}
+animate();
+</script>
+
+</body>
+
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1; minimum-scale=1;">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto|Source+Code+Pro" rel="stylesheet">
     <script src="https://use.fontawesome.com/a1281f6236.js"></script>
 
@@ -61,12 +210,219 @@ ga('send', 'pageview');
 
       </div>
     </div>
-    <script src="js/anim.js"></script>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script type="x-shader/x-vertex" id="vertexshader">
+
+			attribute float size;
+			attribute vec3 customColor;
+
+			varying vec3 vColor;
+
+			void main() {
+
+				vColor = customColor;
+
+				vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+
+				gl_PointSize = size * ( 300.0 / -mvPosition.z );
+
+				gl_Position = projectionMatrix * mvPosition;
+
+			}
+
+		</script>
+
+
+    <script type="x-shader/x-fragment" id="fragmentshader">
+
+			uniform vec3 color;
+			uniform sampler2D pointTexture;
+
+			varying vec3 vColor;
+
+			void main() {
+
+				gl_FragColor = vec4( color * vColor, 1.0 );
+
+				gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
+
+				if ( gl_FragColor.a < ALPHATEST ) discard;
+
+			}
+
+		</script>
+
+    <script type="module">
+
+        import * as THREE from '../build/three.module.js';
+
+        import Stats from './jsm/libs/stats.module.js';
+
+        var renderer, scene, camera, stats;
+
+        var particles;
+
+        var PARTICLE_SIZE = 20;
+
+        var raycaster, intersects;
+        var mouse, INTERSECTED;
+
+        init();
+        animate();
+
+        function init() {
+
+            var container = document.getElementById( 'container' );
+
+            scene = new THREE.Scene();
+
+            camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
+            camera.position.z = 250;
+
+            //
+
+            var vertices = new THREE.BoxGeometry( 200, 200, 200, 16, 16, 16 ).vertices;
+
+            var positions = new Float32Array( vertices.length * 3 );
+            var colors = new Float32Array( vertices.length * 3 );
+            var sizes = new Float32Array( vertices.length );
+
+            var vertex;
+            var color = new THREE.Color();
+
+            for ( var i = 0, l = vertices.length; i < l; i ++ ) {
+
+                vertex = vertices[ i ];
+                vertex.toArray( positions, i * 3 );
+
+                color.setHSL( 0.01 + 0.1 * ( i / l ), 1.0, 0.5 );
+                color.toArray( colors, i * 3 );
+
+                sizes[ i ] = PARTICLE_SIZE * 0.5;
+
+            }
+
+            var geometry = new THREE.BufferGeometry();
+            geometry.addAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
+            geometry.addAttribute( 'customColor', new THREE.BufferAttribute( colors, 3 ) );
+            geometry.addAttribute( 'size', new THREE.BufferAttribute( sizes, 1 ) );
+
+            //
+
+            var material = new THREE.ShaderMaterial( {
+
+                uniforms: {
+                    color: { value: new THREE.Color( 0xffffff ) },
+                    pointTexture: { value: new THREE.TextureLoader().load( "textures/sprites/disc.png" ) }
+                },
+                vertexShader: document.getElementById( 'vertexshader' ).textContent,
+                fragmentShader: document.getElementById( 'fragmentshader' ).textContent,
+
+                alphaTest: 0.9
+
+            } );
+
+            //
+
+            particles = new THREE.Points( geometry, material );
+            scene.add( particles );
+
+            //
+
+            renderer = new THREE.WebGLRenderer();
+            renderer.setPixelRatio( window.devicePixelRatio );
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            container.appendChild( renderer.domElement );
+
+            //
+
+            raycaster = new THREE.Raycaster();
+            mouse = new THREE.Vector2();
+
+            //
+
+            stats = new Stats();
+            container.appendChild( stats.dom );
+
+            //
+
+            window.addEventListener( 'resize', onWindowResize, false );
+            document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+
+        }
+
+        function onDocumentMouseMove( event ) {
+
+            event.preventDefault();
+
+            mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+            mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+        }
+
+        function onWindowResize() {
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize( window.innerWidth, window.innerHeight );
+
+        }
+
+        function animate() {
+
+            requestAnimationFrame( animate );
+
+            render();
+            stats.update();
+
+        }
+
+        function render() {
+
+            particles.rotation.x += 0.0005;
+            particles.rotation.y += 0.001;
+
+            var geometry = particles.geometry;
+            var attributes = geometry.attributes;
+
+            raycaster.setFromCamera( mouse, camera );
+
+            intersects = raycaster.intersectObject( particles );
+
+            if ( intersects.length > 0 ) {
+
+                if ( INTERSECTED != intersects[ 0 ].index ) {
+
+                    attributes.size.array[ INTERSECTED ] = PARTICLE_SIZE;
+
+                    INTERSECTED = intersects[ 0 ].index;
+
+                    attributes.size.array[ INTERSECTED ] = PARTICLE_SIZE * 1.25;
+                    attributes.size.needsUpdate = true;
+
+                }
+
+            } else if ( INTERSECTED !== null ) {
+
+                attributes.size.array[ INTERSECTED ] = PARTICLE_SIZE;
+                attributes.size.needsUpdate = true;
+                INTERSECTED = null;
+
+            }
+
+            renderer.render( scene, camera );
+
+        }
+
+    </script>
+
+
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="/js/anim2.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/js/bootstrap.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
@@ -74,4 +430,5 @@ ga('send', 'pageview');
     <script src="/js/typed.js"></script>
     <script src="/js/index_typer.js"></script>
   </body>
-</html>
+</html
+        >-->

@@ -118,8 +118,9 @@ span.avoidwrap {
     margin-top: 6em; } }
 #links {
   width: 100%;
+  font-size: 30pt;
   display: inline-block;
-  text-align: center;
+  text-align: left;
   -webkit-animation: fadein 8s;
   /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 8s;
