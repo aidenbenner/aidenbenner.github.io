@@ -11,6 +11,11 @@
     body { margin: 0; }
     canvas { width: 100%; height: 100% }
   </style>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -32,8 +37,44 @@
     ga('send', 'pageview');
 
 </script>
-
 <canvas id='can'> </canvas>
+<div class="dropup">
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+    <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li id="cube"><a href="#">Color Cube</a></li>
+    <li id="bubbles"><a href="#">Bubbles</a></li>
+  </ul>
+</div>
+<script src="/js/three.js"></script>
+<script src="/js/colorcube.js"></script>
+<script src="/js/bubbles.js"></script>
+<script>
+  function refreshCanvas() {
+      var oldcanvas = document.getElementById('can');
+      let parentNode = oldcanvas.parentNode
+      oldcanvas.parentNode.removeChild(oldcanvas)
+
+      let canvas = document.createElement("canvas")
+      canvas.id = 'can'
+      parentNode.insertBefore(canvas, null)
+  }
+
+  let cube = new ColorCubeAnim()
+  let bubbles = new BubbleAnim();
+  cube.init()
+
+  $('#cube').click (function(){
+      refreshCanvas()
+      cube.init();
+  })
+
+  $('#bubbles').click (function() {
+      refreshCanvas()
+      bubbles.init();
+      })
+</script>
+
 <div class="container-fluid about-bar">
   <div class="container about">
     <div id="intro-text">
@@ -63,88 +104,7 @@
 
   </div>
 
-<script type="module">
-import * as THREE from '/js/three.module.js';
 
-var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-var can = document.getElementById("can")
-var renderer = new THREE.WebGLRenderer({canvas: can});
-renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
-
-let numCubes = 15;
-
-const bigCube = new THREE.Object3D()
-let cubes = []
-for (let i = 0; i<numCubes; i++) {
-    for (let k = 0; k<numCubes; k++) {
-        for (let z = 0; z<numCubes; z++) {
-            var geometry = new THREE.SphereGeometry(0.1, 0.1, 0.1);
-            var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
-            var cube = new THREE.Mesh(geometry, material);
-            if (i == 0 || k == 0 || z == 0 || i == numCubes - 1|| k == numCubes - 1 || z == numCubes - 1)  {
-                const offset = 1.1
-                cube.position.x = i * offset - numCubes / 2 * offset
-                cube.position.y = k * offset - numCubes / 2 * offset
-                cube.position.z = z * offset - numCubes / 2 * offset
-                bigCube.add(cube);
-                cubes.push(cube)
-            }
-        }
-    }
-}
-
-cubes.sort((a, b) => {
-    let adist = a.position.x + a.position.y + a.position.z
-    let bdist = b.position.x + b.position.y + b.position.z
-    if (adist > bdist) return 1;
-    if (adist < bdist) return -1;
-    return 0;
-})
-
-scene.add(bigCube)
-
-camera.position.z = 5;
-
-const colorDelayMs = 5000
-const colorTransitionMs = 4000
-const startTime = new Date().getTime()
-
-let currCol = 0
-let i = 0
-function animate() {
-	requestAnimationFrame( animate );
-
-	let currTime = new Date().getTime()  - startTime
-
-    if (currCol * colorDelayMs < currTime) {
-        currCol += 1
-    }
-
-	new Date().getTime()
-
-	const colorCnst = 10000
-
-    const deltaTime = currTime % colorDelayMs
-    let cubeN = Math.min(deltaTime / colorTransitionMs) * cubes.length
-	cubes.forEach((cube, idx) => {
-	    // (i + 2 * idx) % colorCnst / colorCnst
-        if (idx < cubeN) {
-            cube.material.color.setHSL((Math.min(deltaTime / colorTransitionMs, 2) / 2.0 + currCol) / 5.0 , 1.0, 0.5);
-        }
-    })
-    i += 1
-
-    const canvas = renderer.domElement;
-    camera.aspect = canvas.clientWidth / canvas.clientHeight;
-    camera.updateProjectionMatrix();
-	bigCube.rotation.x += 0.001
-    bigCube.rotation.y += 0.001
-	renderer.render( scene, camera );
-}
-animate();
-</script>
 
 </body>
 
