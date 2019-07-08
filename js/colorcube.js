@@ -1,3 +1,56 @@
+let mouseX = 0
+let mouseY = 0
+
+let deltaMouseX = 0
+let deltaMouseY = 0
+
+var mouseDown = 0;
+document.body.onmousedown = function() {
+  ++mouseDown;
+}
+document.body.onmouseup = function() {
+  --mouseDown;
+}
+
+
+function onDocumentMouseMove(event) {
+    deltaMouseX = mouseX - event.clientX
+    deltaMouseY = mouseY - event.clientY
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+
+    if (Math.abs(deltaMouseX) > 10) {
+        deltaMouseX = 10 * Math.sign(deltaMouseX)
+    }
+    if (Math.abs(deltaMouseY) > 10) {
+        deltaMouseY = 10 * Math.sign(deltaMouseY)
+    }
+}
+
+document.addEventListener('mousemove', onDocumentMouseMove)
+document.addEventListener('eousemove', onDocumentMouseMove)
+
+function onDocumentTouchStart( event ) {
+    if ( event.touches.length == 1 ) {
+
+        event.preventDefault();
+
+        mouseX = event.touches[ 0 ].pageX - windowHalfX;
+        mouseY = event.touches[ 0 ].pageY - windowHalfY;
+    }
+}
+
+function onDocumentTouchMove( event ) {
+
+    if ( event.touches.length == 1 ) {
+
+        event.preventDefault();
+
+        mouseX = event.touches[ 0 ].pageX - windowHalfX;
+        mouseY = event.touches[ 0 ].pageY - windowHalfY;
+    }
+}
+
 class ColorCubeAnim {
     init() {
         var scene = new THREE.Scene();
@@ -30,7 +83,7 @@ class ColorCubeAnim {
             for (let k = 0; k<numCubes; k++) {
                 for (let z = 0; z<numCubes; z++) {
                     if (i == 0 || k == 0 || z == 0 || i == numCubes - 1|| k == numCubes - 1 || z == numCubes - 1)  {
-                        var geometry = new THREE.SphereGeometry(0.1, 0.1, 0.1);
+                        var geometry = new THREE.SphereBufferGeometry( 0.1, 32, 16 );
                         var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
                         var cube = new THREE.Mesh(geometry, material);
                         const offset = 1.1
@@ -67,7 +120,7 @@ class ColorCubeAnim {
 
             let currTime = new Date().getTime()  - startTime
 
-            if (currCol * colorDelayMs < currTime) {
+            while(currCol * colorDelayMs < currTime) {
                 currCol += 1
             }
 
@@ -80,16 +133,22 @@ class ColorCubeAnim {
             cubes.forEach((cube, idx) => {
                 // (i + 2 * idx) % colorCnst / colorCnst
                 if (idx < cubeN) {
-                    cube.material.color.setHSL((Math.min(deltaTime / colorTransitionMs, 2) / 2.0 + currCol) / 5.0 , 1.0, 0.5);
+                    cube.material.color.setHSL((Math.min(deltaTime / colorTransitionMs, 1) / 2.0 + currCol) / 5.0 , 0.6, 0.6);
                 }
             })
             i += 1
 
             const canvas = renderer.domElement;
+            if (mouseDown > 0) {
+                camera.rotation.x += deltaMouseY * 0.001
+                camera.rotation.y += deltaMouseX * 0.001
+                deltaMouseX *= 0.5
+                deltaMouseY *= 0.5
+            }
             camera.aspect = canvas.clientWidth / canvas.clientHeight;
             camera.updateProjectionMatrix();
-            bigCube.rotation.x += 0.001
-            bigCube.rotation.y += 0.001
+            bigCube.rotation.x += 0.0005
+            bigCube.rotation.y += 0.0005
             renderer.render( scene, camera );
         }.bind(this)
         anim();
