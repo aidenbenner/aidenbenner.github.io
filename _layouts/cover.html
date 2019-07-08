@@ -44,11 +44,13 @@
   <ul class="dropdown-menu">
     <li id="cube"><a href="#">Color Cube</a></li>
     <li id="bubbles"><a href="#">Bubbles</a></li>
+    <li id="bubbles3d"><a href="#">Vortex</a></li>
   </ul>
 </div>
 <script src="/js/three.js"></script>
 <script src="/js/colorcube.js"></script>
 <script src="/js/bubbles.js"></script>
+<script src="/js/bubbles3d.js"></script>
 <script>
   function refreshCanvas() {
       var oldcanvas = document.getElementById('can');
@@ -62,7 +64,9 @@
 
   let cube = new ColorCubeAnim()
   let bubbles = new BubbleAnim();
-  cube.init()
+  let bubbles3d = new Bubbles3DAnim();
+  bubbles3d.init();
+  // cube.init()
 
   $('#cube').click (function(){
       refreshCanvas()
@@ -73,6 +77,11 @@
       refreshCanvas()
       bubbles.init();
       })
+
+  $('#bubbles3d').click (function() {
+      refreshCanvas()
+      bubbles3d.init();
+  })
 </script>
 
 <div class="container-fluid about-bar">
