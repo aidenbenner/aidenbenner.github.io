@@ -106,7 +106,8 @@ class ColorCubeAnim {
             for (let k = 0; k<numCubes; k++) {
                 for (let z = 0; z<numCubes; z++) {
                     if (i == 0 || k == 0 || z == 0 || i == numCubes - 1|| k == numCubes - 1 || z == numCubes - 1)  {
-                        var geometry = new THREE.SphereBufferGeometry( 0.1, 1, 1 );
+                        var geometry = new THREE.CubeGeometry( 0.16, 0.16, 0.16 );
+
                         var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
                         var cube = new THREE.Mesh(geometry, material);
                         const offset = 1.1
@@ -149,10 +150,11 @@ class ColorCubeAnim {
 
             const deltaTime = currTime % colorDelayMs
             let cubeN = Math.min(deltaTime / colorTransitionMs) * cubes.length
+            let h = ((Math.min(deltaTime / colorTransitionMs, 1) / 5.0) + currCol / 5.0) % 1.0
             cubes.forEach((cube, idx) => {
                 // (i + 2 * idx) % colorCnst / colorCnst
                 if (idx < cubeN) {
-                    cube.material.color.setHSL((Math.min(deltaTime / colorTransitionMs, 1) / 2.0 + currCol) / 5.0 , 0.6, 0.6);
+                    cube.material.color.setHSL(h, 0.6, 0.6);
                 }
             })
             i += 1
