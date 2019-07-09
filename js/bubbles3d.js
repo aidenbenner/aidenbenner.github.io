@@ -56,8 +56,8 @@ init() {
     var i = 0
     function render() {
         var time = Date.now() * 0.00005;
-        camera.position.x += Math.sin(i / 1000) * 5 + ( mouseX * 0.4 - camera.position.x ) * 0.01;
-        camera.position.y += Math.cos(i / 1000) * 5 + ( - mouseY * 0.4 - camera.position.y ) * 0.01;
+        camera.position.x += Math.sin(i / 1000) * 2 + ( mouseX * 0.2 - camera.position.x ) * 0.01;
+        camera.position.y += Math.cos(i / 1000) * 2 + ( - mouseY * 0.2 - camera.position.y ) * 0.01;
         i += 1
         //camera.rotation.x += 0.001;
         //camera.rotation.y += 0.001;
