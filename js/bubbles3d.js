@@ -18,7 +18,7 @@ init() {
     }
     console.log(sprite)
     geometry.addAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
-    material = new THREE.PointsMaterial( { size: 35, sizeAttenuation: false, color: 0x00ff00, alphaTest: 0.5, transparent: true } );
+    material = new THREE.PointsMaterial( { size: 35, sizeAttenuation: true, color: 0x00ff00, alphaTest: 0.5, transparent: true } );
 
     material.color.setHSL( 1.0, 0.3, 0.7 );
     var particles = new THREE.Points( geometry, material );
@@ -49,7 +49,7 @@ init() {
         //camera.rotation.x += 0.001;
         //camera.rotation.y += 0.001;
 
-        scene.rotation.x += 0.00005
+        scene.rotation.x += 0.0005
         camera.lookAt( scene.position );
         var h = ( 360 * ( 1.0 + time ) % 360 ) / 360;
         material.color.setHSL( h, 0.5, 0.5 );
