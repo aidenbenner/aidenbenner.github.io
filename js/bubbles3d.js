@@ -16,7 +16,21 @@ init() {
         var z = 2000 * Math.random() - 1000;
         vertices.push( x, y, z );    camera.position.z = 100;
     }
-    console.log(sprite)
+    let canvas=document.getElementById('can')
+    canvas.addEventListener('resize', function () {
+        canvas.width  = canvas.clientWidth;
+        canvas.height = canvas.clientHeight;
+        renderer.setViewport(0, 0, canvas.clientWidth, canvas.clientHeight);
+        camera.aspect = canvas.clientWidth / canvas.clientHeight;
+        camera.updateProjectionMatrix();
+    });
+
+    window.addEventListener('resize', function () {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+    });
+
     geometry.addAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
     material = new THREE.PointsMaterial( { size: 35, sizeAttenuation: true, color: 0x00ff00, alphaTest: 0.5, transparent: true } );
 
