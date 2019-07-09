@@ -32,7 +32,7 @@ init() {
     });
 
     geometry.addAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
-    material = new THREE.PointsMaterial( { size: 35, sizeAttenuation: true, color: 0x00ff00, alphaTest: 0.5, transparent: true } );
+    material = new THREE.PointsMaterial( { size: 35, sizeAttenuation: true, map:sprite, color: 0x00ff00, alphaTest: 0.5, transparent: true } );
 
     material.color.setHSL( 1.0, 0.3, 0.7 );
     var particles = new THREE.Points( geometry, material );
