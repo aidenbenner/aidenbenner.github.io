@@ -10,16 +10,15 @@ init() {
     var geometry = new THREE.BufferGeometry();
     var vertices = [];
     var sprite = new THREE.TextureLoader().load( '/js/sprites/disc.png' );
-    for ( var i = 0; i < 10000; i ++ ) {
+    for ( var i = 0; i < 2000; i ++ ) {
         var x = 2000 * Math.random() - 1000;
         var y = 2000 * Math.random() - 1000;
         var z = 2000 * Math.random() - 1000;
-        console.log(x,y,z)
         vertices.push( x, y, z );    camera.position.z = 100;
     }
     console.log(sprite)
     geometry.addAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
-    material = new THREE.PointsMaterial( { size: 35, sizeAttenuation: false, map:sprite, color: 0x00ff00, alphaTest: 0.5, transparent: true } );
+    material = new THREE.PointsMaterial( { size: 35, sizeAttenuation: false, color: 0x00ff00, alphaTest: 0.5, transparent: true } );
 
     material.color.setHSL( 1.0, 0.3, 0.7 );
     var particles = new THREE.Points( geometry, material );
@@ -43,13 +42,14 @@ init() {
     var i = 0
     function render() {
         var time = Date.now() * 0.00005;
+        i  = 0
         camera.position.x += Math.sin(i / 1000) * 10 + ( mouseX * 0.7 - camera.position.x ) * 0.01;
         i += 1
         camera.position.y += Math.cos(i / 1000) * 10 + ( - mouseY * 0.7 - camera.position.y ) * 0.01;
         //camera.rotation.x += 0.001;
         //camera.rotation.y += 0.001;
 
-        scene.rotation.x += 0.0005
+        scene.rotation.x += 0.00005
         camera.lookAt( scene.position );
         var h = ( 360 * ( 1.0 + time ) % 360 ) / 360;
         material.color.setHSL( h, 0.5, 0.5 );

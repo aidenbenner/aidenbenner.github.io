@@ -106,7 +106,7 @@ class ColorCubeAnim {
             for (let k = 0; k<numCubes; k++) {
                 for (let z = 0; z<numCubes; z++) {
                     if (i == 0 || k == 0 || z == 0 || i == numCubes - 1|| k == numCubes - 1 || z == numCubes - 1)  {
-                        var geometry = new THREE.SphereBufferGeometry( 0.1, 32, 16 );
+                        var geometry = new THREE.SphereBufferGeometry( 0.1, 1, 1 );
                         var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
                         var cube = new THREE.Mesh(geometry, material);
                         const offset = 1.1
@@ -147,10 +147,6 @@ class ColorCubeAnim {
                 currCol += 1
             }
 
-            new Date().getTime()
-
-            const colorCnst = 10000
-
             const deltaTime = currTime % colorDelayMs
             let cubeN = Math.min(deltaTime / colorTransitionMs) * cubes.length
             cubes.forEach((cube, idx) => {
@@ -161,15 +157,16 @@ class ColorCubeAnim {
             })
             i += 1
 
+            /*
             const canvas = renderer.domElement;
             if (mouseDown > 0) {
                 camera.rotation.x += deltaMouseY * 0.001
                 camera.rotation.y += deltaMouseX * 0.001
                 deltaMouseX *= 0.5
                 deltaMouseY *= 0.5
-            }
-            camera.aspect = canvas.clientWidth / canvas.clientHeight;
-            camera.updateProjectionMatrix();
+            }*/
+            //camera.aspect = canvas.clientWidth / canvas.clientHeight;
+            //camera.updateProjectionMatrix();
             bigCube.rotation.x += 0.0005
             bigCube.rotation.y += 0.0005
             renderer.render( scene, camera );
