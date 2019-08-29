@@ -29,6 +29,7 @@ body {
   a:hover {
     color:$link-hover-col; 
   }
+
   margin:0px;
   padding:0px; 
 }    
@@ -232,6 +233,7 @@ a:hover {
 
 
 #name-top {
+    font-family: $code-font;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
         -ms-animation: fadein 2s; /* Internet Explorer */
@@ -253,10 +255,7 @@ a:hover {
   .about-bar { 
     font-size:1em;
     // background-color:$top-background; 
-    overflow:auto; 
-    padding-bottom:1em;
-  }
-  .new-nav{
+    overflow:auto; padding-bottom:1em; } .new-nav{
     margin-top:1em; 
   }
 }
